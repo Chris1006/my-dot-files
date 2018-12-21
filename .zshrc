@@ -13,6 +13,36 @@ SAVEHIST=1000
 setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
+setopt promptsubst
+
+#GIT STUFF
+
+autoload -Uz vcs_info
+zstyle ":vcs_info:*" enable git
+zstyle ":vcs_info:(git*):*" get-revision true
+zstyle ":vcs_info:(git*):*" check-for-changes true
+
+local _branch="%c%u%m %{$fg[green]%}%b%{$reset_color%}"
+local _repo="%{$fg[green]%}%r %{$fg[yellow]%}%{$reset_color%}"
+local _revision="%{$fg[yellow]%}%.7i%{$reset_color%}"
+local _action="%{$fg[red]%}%a%{$reset_color%}"
+zstyle ":vcs_info:*" stagedstr "%{$fg[yellow]%}✓%{$reset_color%}"
+zstyle ":vcs_info:*" unstagedstr "%{$fg[red]%}✗%{$reset_color%}"
+zstyle ":vcs_info:git*" formats "$_branch:$_revision - $_repo"
+zstyle ":vcs_info:git*" actionformats "$_branch:$_revision:$_action - $_repo"
+zstyle ':vcs_info:git*+set-message:*' hooks git-stash
+# Uncomment to enable vcs_info debug mode
+# zstyle ':vcs_info:*+*:*' debug true
+
+function +vi-git-stash() {
+	if [[ -s "${hook_com[base]}/.git/refs/stash" ]]; then
+		hook_com[misc]="%{$fg_bold[grey]%}~%{$reset_color%}"
+	fi
+}
+
+precmd() {
+	vcs_info
+}
 
 # AUTOCOMPLETE OPTIONS
 
@@ -51,11 +81,9 @@ show_user_host() {
   echo "%F{red}[%F{yellow}%n%F{green}@%F{blue}%M %F{magenta}%~%F{red}]%F{white}"
 }
 
-renderprompt() {
-  PS1=$(show_user_host)%F{blue}$(parse_git_branch)$'\n'%F{white}"$ "%{$resetcolor%}
-}
+PROMPT=$(show_user_host)%F{blue}'${vcs_info_msg_0_}'$'\n'%F{white}"$ "%{$resetcolor%}
 
-precmd() { renderprompt; }
+#RPROMPT='${vcs_info_msg_0_}' # git branch
 
 # run neofetch on startup
 #neofetch
