@@ -4,7 +4,13 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Disabled auto update
 DISABLE_AUTO_UPDATE="true"
 
+#COLORS
+
+autoload -U colors && colors
+
 # HISTORY OPTIONS
+
+
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
