@@ -52,7 +52,12 @@ precmd() {
 
 # AUTOCOMPLETE OPTIONS
 
+autoload -Uz compinit
+compinit
+
 zstyle ':completion:*' menu select
+zstyle ':completion:*' list-prompt   ''
+zstyle ':completion:*' select-prompt ''
 
 # aliases
 alias pm="trizen"
