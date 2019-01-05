@@ -68,6 +68,10 @@ alias ls="ls --color=tty"
 alias tmux="tmux attach 2> /dev/null || tmux new"
 alias tm="tmux"
 
+alias confi3="$EDITOR ~/.config/i3/config"
+alias confzsh="$EDITOR ~/.zshrc"
+
+
 #setting up nvm
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
