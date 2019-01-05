@@ -65,6 +65,8 @@ alias sudo="sudo "
 alias sv="systemctl"
 alias sysud="trizen -Syyu"
 alias ls="ls --color=tty"
+alias tmux="tmux attach 2> /dev/null || tmux new"
+alias tm="tmux"
 
 #setting up nvm
 #export NVM_DIR="$HOME/.nvm"
