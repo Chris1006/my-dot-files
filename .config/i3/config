@@ -47,8 +47,8 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsy $mod+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+Shift+x exec ~/scripts/lockscreen.sh
-bindsym Mod1+Ctrl+Delete exec ~/scripts/lockscreen.sh
+bindsym $mod+Shift+x exec ~/.scripts/utils/lockscreen.sh
+bindsym Mod1+Ctrl+Delete exec ~/.scripts/utils/lockscreen.sh
 
 # some utils
 bindsym $mod+b exec chromium
@@ -160,7 +160,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec ~/scripts/logout-script.sh 
+bindsym $mod+Shift+e exec ~/.scripts/utils/logout-script.sh 
 
 # resizing windows
 bindsym $mod+Mod1+j resize shrink width 10 px or 10 ppt
@@ -183,12 +183,12 @@ exec --no-startup-id compton
 #exec --no-startup-id polybar example
 exec --no-startup-id udiskie
 exec --no-startup-id dunst
-exec --no-startup-id ~/scripts/start-gnome-keyring.sh
+exec --no-startup-id ~/.scripts/utils/start-gnome-keyring.sh
 #exec --no-startup-id pa-applet
 #exec --no-startup-id nm-applet
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id xautolock -time 5 -locker ~/scripts/lockscreen.sh &
+exec --no-startup-id xautolock -time 5 -locker ~/.scripts/utils/lockscreen.sh &
 
 # gruvbox color theme
 set $base00 #282c34
