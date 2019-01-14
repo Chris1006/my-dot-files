@@ -1,8 +1,7 @@
 #!/bin/sh
 
-API_KEY="0cfe69807dfd288145b45827337fcf35"
-
-CITY="Bad Nauheim"
+API_KEY=$WEATHER_API_KEY
+CITY=$WEATHER_CITY
 
 URL="http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric"
 

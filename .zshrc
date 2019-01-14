@@ -1,3 +1,5 @@
+source ~/.reg_env_vars
+
 # EXPORT PATH 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
