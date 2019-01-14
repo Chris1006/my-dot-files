@@ -4,6 +4,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Disabled auto update
 DISABLE_AUTO_UPDATE="true"
 
+# HIGHDPI
+
+export GDK_SCALE=2
+#export GDK_DPI_SCALE=1.75
 #COLORS
 
 autoload -U colors && colors
@@ -60,6 +64,8 @@ zstyle ':completion:*' list-prompt   ''
 zstyle ':completion:*' select-prompt ''
 
 # aliases
+alias mutt="neomutt"
+alias muttorg="mutt"
 alias pm="trizen"
 alias sudo="sudo "
 alias sv="systemctl"
@@ -107,3 +113,9 @@ PROMPT=$(show_user_host)%F{blue}'${vcs_info_msg_0_}'$'\n'%F{white}"$ "%{$resetco
 #neofetch
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
+
+PATH="/home/chris/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/chris/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/chris/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/chris/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/chris/perl5"; export PERL_MM_OPT;

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+screen_brightness=`xbacklight | awk '{print int($1+0.5)}'`
+
+echo "$screen_brightness%"

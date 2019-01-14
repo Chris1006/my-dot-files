@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo `trizen -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"`
+
+case $BLOCK_BUTTON in
+  1)
+    "$TERMINAL" -e trizen -Syyu && pkill -RTMIN+13 i3block
+;;
+esac

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+print_temp_table() {
+  for sensorname in /sys/class/thermal/thermal_zone*; do
+    sens_type=`cat $sensorname/type`
+    sens_temp=`cat $sensorname/temp`
+
+    echo "$sens_type $sens_temp"
+  done
+}
+
+cpu_temp=`print_temp_table  | grep skylake |  sed 's/\(.\)..$/.\1°C/' | awk '{print $2}'`
+
+echo "$cpu_temp"

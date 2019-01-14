@@ -1,0 +1,9 @@
+#/bin/sh
+
+free_disk_space=`df -h | grep /home$ | awk '{printf "%s Used [%s/%s]", $5, $4, $2}'`
+
+echo "$free_disk_space"
+
+case $BLOCK_BUTTON in
+  1) "$TERMINAL" -e calcurse ;;
+esac

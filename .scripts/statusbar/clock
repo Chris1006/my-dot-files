@@ -1,0 +1,12 @@
+#!/bin/sh
+
+show_current_datetime() {
+  current_datetime=`date +"%d.%m.%G [%a] %H:%M"`
+  echo "$current_datetime "
+}
+
+show_current_datetime
+
+case $BLOCK_BUTTON in
+    1) "$TERMINAL" -e calcurse ;;
+esac

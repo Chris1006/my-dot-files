@@ -1,0 +1,17 @@
+#!/bin/sh
+
+muted=`pactl list sinks | awk '/Stumm/{print $2}'`
+volume=`pactl list sinks | awk '/\sLautstärke/{printf "%s", $5}'`
+
+case $muted in
+  ja)
+    echo "$volume (muted)"
+    ;;
+  nein)
+    echo "$volume"
+    ;;
+esac
+
+case $BLOCK_BUTTON in
+  1) pavucontrol ;;
+esac

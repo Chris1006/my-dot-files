@@ -1,0 +1,9 @@
+#!/bin/sh
+
+current_ip_addr=`ip addr show wlp58s0 | grep -E "inet " | awk '{ print $2 } END { if (!NR) print "offline" } '`
+
+echo "$current_ip_addr"
+
+case $BLOCK_BUTTON in
+  1) "$TERMINAL" -e nmtui;;
+esac

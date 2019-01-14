@@ -1,0 +1,60 @@
+#/bin/bash
+
+battery_capacity=`cat /sys/class/power_supply/BAT0/capacity`
+
+show_discharging() {
+
+  battery_charge_full=`cat /sys/class/power_supply/BAT0/charge_full`
+  battery_charge_now=`cat /sys/class/power_supply/BAT0/charge_now`
+  battery_current_now=`cat /sys/class/power_supply/BAT0/current_now`
+
+  seconds_left=`echo "3600*$battery_charge_now/$battery_current_now" | bc`
+
+  h=$((seconds_left/3600))
+  m=$((seconds_left%3600/60))
+  s=$((seconds_left%60))
+
+  printf "%d%% [%02d:%02d]" $battery_capacity $h $m
+}
+
+show_charging() {
+  ch_full=`cat /sys/class/power_supply/BAT0/charge_full`
+  ch_now=`cat /sys/class/power_supply/BAT0/charge_now`
+  cur_now=`cat /sys/class/power_supply/BAT0/current_now`
+
+  #time_remain = (ch_full - ch_now) / cur_now
+
+  time_remain=`echo "3600*($ch_full-$ch_now)/$cur_now" | bc`
+
+  
+  h=$((time_remain/3600))
+  m=$((time_remain%3600/60))
+  s=$((time_remain%60))
+
+  printf "⚡ %02d%% [%02d:%02d]" $battery_capacity $h $m
+}
+
+show_full() {
+  echo "⚡100% Full"
+}
+
+show_unknown() {
+  echo ""
+}
+
+status=`cat /sys/class/power_supply/BAT0/status`
+
+case $status in
+  Charging)
+    show_charging
+    ;;
+  Discharging)
+    show_discharging
+    ;;
+  Full)
+    show_full
+    ;;
+  *)
+    show_unknown
+    ;;
+esac

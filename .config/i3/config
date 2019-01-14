@@ -9,8 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-gaps inner	10
-gaps outer	5
+gaps inner	2
+gaps outer	1
 
 new_window	1pixel
 
@@ -35,7 +35,7 @@ font pango:Noto Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -45,7 +45,14 @@ bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsy $mod+d exec --no-startup-id i3-dmenu-desktop
+
+bindsym $mod+Shift+x exec ~/scripts/lockscreen.sh
+bindsym Mod1+Ctrl+Delete exec ~/scripts/lockscreen.sh
+
+# some utils
+bindsym $mod+b exec chromium
+bindsym $mod+m exec $TERMINAL -e neomutt
 
 # change focus
 bindsym $mod+j focus left
@@ -98,13 +105,18 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Audio Control
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && notify-send -t 1000 "$(~/.scripts/statusbar/volume-new)" && pkill -RTMIN+10 i3blocks #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && notify-send -t 1000 "$(~/.scripts/statusbar/volume-new)" && pkill -RTMIN+10 i3blocks #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && notify-send -t 1000 "$(~/.scripts/statusbar/volume-new)" && pkill -RTMIN+10 i3blocks # mute sound
 
 # Brightness Control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightneszS
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && notify-send -t 1000  "$(~/.scripts/statusbar/screen_brightness)" && pkill -RTMIN+12 i3blocks  # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && notify-send -t 1000 "$(~/.scripts/statusbar/screen_brightness)" && pkill -RTMIN+12 i3blocks # decrease screen brightness
+
+# Media player controls
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -148,59 +160,42 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/scripts/logout-script.sh 
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# resizing windows
+bindsym $mod+Mod1+j resize shrink width 10 px or 10 ppt
+bindsym $mod+Mod1+k resize grow height 10 px or 10 ppt
+bindsym $mod+Mod1+l resize shrink height 10 px or 10 ppt
+bindsym $mod+Mod1+odiaeresis resize grow width 10 px or 10 ppt
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
+# resizing windows with arrow keys
+bindsym $mod+Mod1+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Mod1+Down resize grow height 10 px or 10 ppt
+bindsym $mod+Mod1+Up resize shrink height 10 px or 10 ppt
+bindsym $mod+Mod1+Right resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
+# Autostart
+exec --no-startup-id xrandr --dpi 168
+#exec --no-startup-id pulseaudio
+exec --no-startup-id mpd
 exec --no-startup-id feh --bg-scale ~/.config/wallpaper.jpg
 exec --no-startup-id compton
 #exec --no-startup-id polybar example
 exec --no-startup-id udiskie
 exec --no-startup-id dunst
-exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id ~/scripts/start-gnome-keyring.sh
+#exec --no-startup-id pa-applet
+#exec --no-startup-id nm-applet
+#exec --no-startup-id blueman-applet
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id xautolock -time 5 -locker ~/scripts/lockscreen.sh &
 
-# Base16 Gruvbox dark, pale
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
-#
-# You can use these variables anywhere in the i3 configuration file.
-
-## Base16 OneDark
-# Author: Lalit Magant (http://github.com/tilal6991)
-#
-# You can use these variables anywhere in the i3 configuration file.
-
+# gruvbox color theme
 set $base00 #282c34
 set $base01 #353b45
 set $base02 #3e4451
 set $base03 #545862
-set $base04 #565c64
+set $base04 #969cA4
 set $base05 #abb2bf
 set $base06 #b6bdca
 set $base07 #c8ccd4
@@ -215,7 +210,8 @@ set $base0F #be5046
 
 # Basic bar configuration using the Base16 variables.
 bar {
-    status_command i3status
+    status_command i3blocks
+    #status_command ~/scripts/start_i3status.sh
     position top
     colors {
         background $base00

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+CPU_USAGE=`top -b -p1 -n1 | awk '/CPU\(s\)/{print $2}'`
+
+echo "$CPU_USAGE%"
+
+case $BLOCK_BUTTON in
+  1) "$TERMINAL" -e htop ;;
+esac
