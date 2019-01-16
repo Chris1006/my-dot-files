@@ -7,7 +7,7 @@ Here are my Linux dotfiles. They are made for Arch Linux but should also work on
 In the Example I use Arch Linux with the AUR Package Manager `trizen`. The Dependencies can be installed with
 
 `
-    trizen -S git stow xorg-server xorg-xinit i3-gaps i3blocks i3lock dmenu dunst st zsh zsh-completions pulseaudio pavucontrol ranger gnome-keyring seahorse feh sxiv scrot mpd mpc ncmpcpp mplayer neomutt offlineimap msmtp dialog htop networkmanager wget curl chromium
+    trizen -S vim git stow xorg-server xorg-xinit i3-gaps i3blocks i3lock dmenu dunst st zsh zsh-completions pulseaudio pavucontrol ranger gnome-keyring seahorse feh sxiv scrot mpd mpc ncmpcpp mplayer neomutt offlineimap msmtp dialog htop networkmanager wget curl chromium chronie acpid dbus avahi noto-fonts noto-fonts-emoji
 `
 
 After that you can clone the repository and install the dotfiles with
@@ -38,6 +38,15 @@ inside the cloned repo-folder. Don't forget to copy the ~/.reg_env_vars.example 
         st (I recommend my patched repository)
         zsh
         zsh-completions
+
+- Fonts
+
+	noto-fonts
+	noto-fonts-emoji
+
+- Editor
+
+	vim
 
 - Browser
 
