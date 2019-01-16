@@ -13,7 +13,7 @@ In the Example I use Arch Linux with the AUR Package Manager `trizen`. The Depen
 After that you can clone the repository and install the dotfiles with
 
 `
-stow *
+stow * -t ~
 `
 
 inside the cloned repo-folder. Don't forget to copy the ~/.reg_env_vars.example and set your env-vars and to install your video driver for Xorg.
