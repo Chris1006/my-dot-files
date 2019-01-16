@@ -35,7 +35,7 @@ show_charging() {
 }
 
 show_full() {
-  echo "⚡100% Full"
+  echo "⚡100% [FULL]"
 }
 
 show_unknown() {

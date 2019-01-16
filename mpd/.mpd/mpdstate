@@ -1,0 +1,35 @@
+sw_volume: 100
+audio_device_state:1:pulse audio
+state: stop
+current: 0
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/01-lagwagon-alien8-fnt.mp3
+1:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/02-lagwagon-violins-fnt.mp3
+2:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/03-lagwagon-messengers-fnt.mp3
+3:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/04-lagwagon-never_stops-fnt.mp3
+4:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/05-lagwagon-sick-fnt.mp3
+5:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/06-lagwagon-island_of_shame-fnt.mp3
+6:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/07-lagwagon-give_it_back-fnt.mp3
+7:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/08-lagwagon-making_friends-fnt.mp3
+8:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/09-lagwagon-after_you_my_friend-fnt.mp3
+9:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/10-lagwagon-razor_burn-fnt.mp3
+10:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/11-lagwagon-falling_apart-fnt.mp3
+11:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/12-lagwagon-sleep-fnt.mp3
+12:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/13-lagwagon-mister_bap-fnt.mp3
+13:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/14-lagwagon-beer_goggles-fnt.mp3
+14:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/15-lagwagon-the_chemist-fnt.mp3
+15:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/16-lagwagon-coconut-fnt.mp3
+16:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/17-lagwagon-may_16th-fnt.mp3
+17:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/18-lagwagon-bombs_away-fnt.mp3
+18:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/19-lagwagon-back_one_out-fnt.mp3
+19:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/20-lagwagon-burn-fnt.mp3
+20:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/21-lagwagon-coffee_and_cigarettes-fnt.mp3
+21:Lagwagon - 2005 - Live in a Dive/Live_in_A_Dive (2005)/22-lagwagon-stokin_the_neighbors-fnt.mp3
+playlist_end
