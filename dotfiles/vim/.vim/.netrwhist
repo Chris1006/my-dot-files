@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/chris/.scripts/statusbar'
 let g:netrw_dirhist_2='/home/chris/Arbeit/Netzwerk/.smbcredentials'
 let g:netrw_dirhist_3='/home/chris/.scripts/statusbar'
 let g:netrw_dirhist_4='/home/chris/.scripts'
 let g:netrw_dirhist_5='/home/chris/projekte/cpo.functional'
 let g:netrw_dirhist_6='/home/chris/my-dot-files/dotfiles'
+let g:netrw_dirhist_7='/home/chris/projekte'
+let g:netrw_dirhist_8='/home/chris/projekte/cpo'

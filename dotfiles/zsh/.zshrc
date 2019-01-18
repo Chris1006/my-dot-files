@@ -1,7 +1,7 @@
 source ~/.reg_env_vars
 
 # EXPORT PATH 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/bin/games:/usr/local/bin:$PATH
 
 # Disabled auto update
 DISABLE_AUTO_UPDATE="true"
