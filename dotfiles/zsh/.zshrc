@@ -78,12 +78,7 @@ alias tm="tmux"
 
 alias confi3="$EDITOR ~/.config/i3/config"
 alias confzsh="$EDITOR ~/.zshrc"
-
-
-#setting up nvm
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias confi3blocks"$EDITOR ~/.config/i3blocks/config"
 
 #setting up vim as default editor
 export VISUAL=vim
@@ -93,31 +88,17 @@ export TERMINAL="st"
 export TERM=$TERMINAL
 
 #setting up dotnet core paths
-export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
-export PATH=$MSBuildSDKsPath:$PATH
-
+if [ -d "/opt/dotnet" ]; then
+	export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
+	export PATH=$MSBuildSDKsPath:$PATH
+fi
 
 # theming
-
-#parse_git_branch() {
-# git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\<\1\>/'
-#}
-
 show_user_host() {
   echo "%F{red}[%F{yellow}%n%F{green}@%F{blue}%M %F{magenta}%~%F{red}]%F{white}"
 }
 
 PROMPT=$(show_user_host)%F{blue}'${vcs_info_msg_0_}'$'\n'%F{white}"$ "%{$resetcolor%}
 
-#RPROMPT='${vcs_info_msg_0_}' # git branch
-
-# run neofetch on startup
-#neofetch
-
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
-PATH="/home/chris/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/chris/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/chris/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/chris/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/chris/perl5"; export PERL_MM_OPT;

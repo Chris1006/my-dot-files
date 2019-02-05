@@ -45,7 +45,7 @@ label=📧
 interval=60
 command=~/.scripts/statusbar/pacman
 label=📦
-signal=13
+#signal=13
 
 [screen_brightness]
 interval=once
