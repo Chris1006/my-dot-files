@@ -54,7 +54,7 @@ bindsym $mod+Shift+x exec ~/.scripts/utils/lockscreen.sh
 bindsym Mod1+Ctrl+Delete exec ~/.scripts/utils/lockscreen.sh
 
 # some utils
-bindsym $mod+b exec chromium
+bindsym $mod+b exec firefox
 bindsym $mod+m exec $TERMINAL -e neomutt
 
 # change focus

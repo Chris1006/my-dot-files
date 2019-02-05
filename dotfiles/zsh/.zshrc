@@ -83,7 +83,7 @@ alias confi3blocks"$EDITOR ~/.config/i3blocks/config"
 #setting up vim as default editor
 export VISUAL=vim
 export EDITOR=$VISUAL
-export BROWSER="chromium"
+export BROWSER="firefox"
 export TERMINAL="st"
 export TERM=$TERMINAL
 
