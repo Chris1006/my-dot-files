@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo `trizen -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"`
+echo `trizen -Syy > /dev/null && trizen -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"`
 
 case $BLOCK_BUTTON in
   1)
