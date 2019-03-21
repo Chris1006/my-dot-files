@@ -2,50 +2,50 @@
 separator_block_width=10
 markup=pango
 
-[music]
-interval=1
-command=~/.scripts/statusbar/music
-label=🎵
+#[music]
+#interval=
+#command=~/.scripts/statusbar/music
+#label=🎵
 
-[weather]
-interval=1800
-command=~/.scripts/statusbar/weather
+#[weather]
+#interval=1800
+#command=~/.scripts/statusbar/weather
 
-[free_disk_space]
-interval=60
-command=~/.scripts/statusbar/free_disk_space
-label=💽
+#[free_disk_space]
+#interval=60
+#command=~/.scripts/statusbar/free_disk_space
+#label=💽
 
-[cpu_temp]
-interval=15
-command=~/.scripts/statusbar/cpu_temp
-label=🌡️
+#[cpu_temp]
+#interval=15
+#command=~/.scripts/statusbar/cpu_temp
+#label=🌡️
 
-[cpu_usage]
-interval=15
-command=~/.scripts/statusbar/cpu_usage
-label=💻
+#[cpu_usage]
+#interval=15
+#command=~/.scripts/statusbar/cpu_usage
+#label=💻
 
 [battery]
-interval=5
+interval=20
 command=~/.scripts/statusbar/battery
 label=🔋
 
-[ip_addr]
-interval=10
-command=~/.scripts/statusbar/ip_addr
-label=📶
+#[ip_addr]
+#interval=20
+#command=~/.scripts/statusbar/ip_addr
+#label=📶
 
-[mailbox]
-interval=5
-command=~/.scripts/statusbar/mailbox
-label=📧
+#[mailbox]
+#interval=10
+#command=~/.scripts/statusbar/mailbox
+#label=📧
 
-[pacman]
-interval=60
-command=~/.scripts/statusbar/pacman
-label=📦
-signal=13
+#[pacman]
+#interval=60
+#command=~/.scripts/statusbar/pacman
+#label=📦
+#signal=13
 
 [screen_brightness]
 interval=once
