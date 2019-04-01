@@ -1,7 +1,7 @@
 source ~/.reg_env_vars
 
 # EXPORT PATH 
-export PATH=$HOME/bin:$HOME/bin/games:/usr/local/bin:$PATH
+export PATH=$HOME/.scripts/utils:$HOME/bin:$HOME/bin/games:/usr/local/bin:$PATH
 
 # Disabled auto update
 DISABLE_AUTO_UPDATE="true"
@@ -75,6 +75,8 @@ alias sysud="trizen -Syyu"
 alias ls="ls --color=tty"
 alias tmux="tmux attach 2> /dev/null || tmux new"
 alias tm="tmux"
+alias ll="ls -l"
+alias lal="ls -al"
 
 alias confi3="$EDITOR ~/.config/i3/config"
 alias confzsh="$EDITOR ~/.zshrc"
@@ -102,3 +104,5 @@ PROMPT=$(show_user_host)%F{blue}'${vcs_info_msg_0_}'$'\n'%F{white}"$ "%{$resetco
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
+# Add .NET Core SDK tools
+export PATH="$PATH:/home/chris/.dotnet/tools"

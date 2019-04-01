@@ -193,6 +193,7 @@ exec --no-startup-id ~/.scripts/utils/start-gnome-keyring.sh
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xautolock -time 5 -locker ~/.scripts/utils/lockscreen.sh &
 exec --no-startup-id blueman-applet
+
 # Dracula color theme
 set $base00 #282936
 set $base01 #3a3c4e
