@@ -107,6 +107,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Display Control
+bindsym $mod+F3		exec --no-startup-id displayselect
+bindsym XF86Display		exec --no-startup-id displayselect
+
 # Audio Control
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && notify-send -t 1000 "$(~/.scripts/statusbar/volume-new)" && pkill -RTMIN+10 i3blocks #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && notify-send -t 1000 "$(~/.scripts/statusbar/volume-new)" && pkill -RTMIN+10 i3blocks #decrease sound volume
