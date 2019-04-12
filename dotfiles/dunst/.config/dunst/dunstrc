@@ -2,7 +2,7 @@
 # tostiheld 2015
 
 [global]
-    font                 = Noto Sans Mono 18
+    font                 = Noto Sans Mono 12
     markup	         = yes
     plain_text           = no
     format               = "%s\n%b"

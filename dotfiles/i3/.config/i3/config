@@ -185,7 +185,7 @@ bindsym $mod+Mod1+Right resize grow width 10 px or 10 ppt
 exec --no-startup-id xrandr --dpi 168
 #exec --no-startup-id pulseaudio
 exec --no-startup-id mpd
-exec --no-startup-id feh --bg-scale ~/.config/wallpaper.jpg
+exec --no-startup-id setbg
 exec --no-startup-id compton
 #exec --no-startup-id polybar example
 exec --no-startup-id udiskie
