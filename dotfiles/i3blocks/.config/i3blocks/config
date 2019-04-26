@@ -37,7 +37,7 @@ command=~/.scripts/statusbar/ip_addr
 label=📶
 
 [mailbox]
-interval=10
+interval=180
 command=~/.scripts/statusbar/mailbox
 label=📧
 
