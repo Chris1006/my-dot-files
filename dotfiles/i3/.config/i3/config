@@ -54,7 +54,8 @@ bindsym $mod+Shift+x exec ~/.scripts/utils/lockscreen.sh
 bindsym Mod1+Ctrl+Delete exec ~/.scripts/utils/lockscreen.sh
 
 # some utils
-bindsym $mod+b exec firefox
+bindsym $mod+b exec --no-startup-id firefox
+bindsym $mod+Shift+b exec --no-startup-id tor-browser
 bindsym $mod+m exec $TERMINAL -e neomutt
 
 # change focus
@@ -106,6 +107,9 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# mounting
+bindsym $mod+F5		exec --no-startup-id dmenumount
 
 # Display Control
 bindsym $mod+F3		exec --no-startup-id displayselect
