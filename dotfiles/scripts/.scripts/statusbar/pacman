@@ -1,9 +1,13 @@
 #!/bin/sh
 
-echo `trizen -Syy > /dev/null && trizen -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"`
+#echo `trizen -Syy > /dev/null && trizen -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"`
+
+if [ -f /tmp/updatesavailable ]; then
+	cat /tmp/updatesavailable
+fi
 
 case $BLOCK_BUTTON in
   1)
-    "$TERMINAL" -e trizen -Syyu && pkill -RTMIN+13 i3block
+    "$TERMINAL" -e trizen -Syyu && $HOME/.scripts/checkupdates
 ;;
 esac

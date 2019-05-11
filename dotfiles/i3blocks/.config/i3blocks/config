@@ -37,12 +37,13 @@ command=~/.scripts/statusbar/ip_addr
 label=📶
 
 [mailbox]
-interval=180
+interval=once
 command=~/.scripts/statusbar/mailbox
 label=📧
+signal=19
 
 [pacman]
-interval=60
+interval=once
 command=~/.scripts/statusbar/pacman
 label=📦
 signal=13
