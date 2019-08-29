@@ -8,7 +8,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # HIGHDPI
 
-export GDK_SCALE=2
+#export GDK_SCALE=2
 #export GDK_DPI_SCALE=1.75
 #COLORS
 
