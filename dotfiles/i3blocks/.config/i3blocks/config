@@ -26,6 +26,10 @@ interval=15
 command=~/.scripts/statusbar/cpu_usage
 label=💻
 
+[battery]
+interval=5
+command=~/.scripts/statusbar/battery
+label=🔋
 
 [ip_addr]
 interval=20
