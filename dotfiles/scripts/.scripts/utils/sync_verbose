@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sync & watch -n 1 grep -e Dirty: /proc/meminfo

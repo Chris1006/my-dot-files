@@ -9,6 +9,6 @@ print_temp_table() {
   done
 }
 
-cpu_temp=`print_temp_table  | grep skylake |  sed 's/\(.\)..$/.\1°C/' | awk '{print $2}'`
+cpu_temp=`print_temp_table   |  sed 's/\(.\)..$/.\1°C/' | awk '{print $2}'`
 
 echo "$cpu_temp"
