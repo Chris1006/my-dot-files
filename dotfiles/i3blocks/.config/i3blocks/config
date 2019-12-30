@@ -35,6 +35,12 @@ interval=20
 command=~/.scripts/statusbar/ip_addr
 label=📶
 
+[news]
+interval=once
+command=~/.scripts/statusbar/news
+label=📰
+signal=14
+
 [mailbox]
 interval=once
 command=~/.scripts/statusbar/mailbox

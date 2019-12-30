@@ -1,0 +1,3 @@
+#!/bin/sh
+
+newsboat -x reload-all && pkill -RTMIN+14 i3blocks
