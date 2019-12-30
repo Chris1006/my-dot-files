@@ -106,3 +106,5 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 # Add .NET Core SDK tools
 export PATH="$PATH:/home/chris/.dotnet/tools"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
