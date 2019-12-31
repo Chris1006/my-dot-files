@@ -173,6 +173,10 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec ~/.scripts/utils/logout-script.sh 
 
+# pomodoro timer
+bindsym $mod+Ctrl+p exec notify-send --icon=gtk-info Pomodoro "Focus for 25 minutes" && sleep 2500 && notify-send --icon=gtk-info Pomodoro "Take a 5 minute break"
+
+
 # resizing windows
 bindsym $mod+Mod1+j resize shrink width 10 px or 10 ppt
 bindsym $mod+Mod1+k resize grow height 10 px or 10 ppt
@@ -186,7 +190,7 @@ bindsym $mod+Mod1+Up resize shrink height 10 px or 10 ppt
 bindsym $mod+Mod1+Right resize grow width 10 px or 10 ppt
 
 # Autostart
-exec --no-startup-id xrandr --dpi 168
+#exec --no-startup-id xrandr --dpi 168
 #exec --no-startup-id pulseaudio
 exec --no-startup-id mpd
 exec --no-startup-id setbg
@@ -200,7 +204,6 @@ exec --no-startup-id ~/.scripts/utils/start-gnome-keyring.sh
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xautolock -time 5 -locker ~/.scripts/utils/lockscreen.sh &
-exec --no-startup-id blueman-applet
 
 # Dracula color theme
 set $base00 #282936

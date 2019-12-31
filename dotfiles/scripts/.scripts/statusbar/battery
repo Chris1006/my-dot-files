@@ -22,10 +22,10 @@ status=`cat /sys/class/power_supply/BAT0/status`
 
 case $status in
   Charging)
-    show_charging
-    ;;
+    acpi | sed s/,//g | awk '{ printf "%s [%s]\n", $4, $5}'
+    ;;  
   Discharging)
-    show_discharging
+    acpi | sed s/,//g | awk '{ printf "%s [%s]\n", $4, $5}'
     ;;
   Full)
     show_full

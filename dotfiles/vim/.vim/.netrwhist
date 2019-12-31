@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =2
+<<<<<<< HEAD
 let g:netrw_dirhist_2='/etc/pacman.d/hooks'
 let g:netrw_dirhist_1='/home/chris/.scripts'
+=======
+let g:netrw_dirhist_2='/home/chris/.config/newsboat'
+let g:netrw_dirhist_1='/etc/iptables'
+>>>>>>> f7c38d03ad46ed392983aec5d46f6e90719ce0b7

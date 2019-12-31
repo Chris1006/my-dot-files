@@ -3,4 +3,4 @@ export SSH_AUTH_SOCK
 export MOZ_USE_OMTC=1
 
 exec i3
-xrandr --dpi 192
+#xrandr --dpi 192
