@@ -57,6 +57,10 @@ bindsym Mod1+Ctrl+Delete exec ~/.scripts/utils/lockscreen.sh
 bindsym $mod+b exec --no-startup-id firefox
 bindsym $mod+Shift+b exec --no-startup-id tor-browser
 bindsym $mod+m exec $TERMINAL -e neomutt
+bindsym $mod+c exec $TERMINAL -e calcurse
+bindsym $mod+n exec $TERMINAL -e newsboat
+#bindsym $mod+v exec code
+
 
 # change focus
 bindsym $mod+j focus left
@@ -198,7 +202,7 @@ exec --no-startup-id picom -b
 #exec --no-startup-id polybar example
 exec --no-startup-id udiskie
 exec --no-startup-id dunst
-#exec --no-startup-id ~/.scripts/utils/start-gnome-keyring.sh
+exec --no-startup-id ~/.scripts/utils/start-gnome-keyring.sh
 #exec --no-startup-id pa-applet
 #exec --no-startup-id nm-applet
 #exec --no-startup-id blueman-applet
