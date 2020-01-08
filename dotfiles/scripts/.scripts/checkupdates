@@ -1,8 +1,8 @@
-#/bin/sh
+#!/bin/sh
 
 UPDATESAVAILABLE=$(trizen -Syy > /dev/null && trizen -Qu | grep -v "\[ignored\]" | wc -l )
 
-if [[ $UPDATESAVAILABLE != "0" ]]; then
+if [ $UPDATESAVAILABLE != "0" ]; then
 	echo ${UPDATESAVAILABLE:0:1}
 	echo "$UPDATESAVAILABLE" > /tmp/updatesavailable &&
 	notify-send "$UPDATESAVAILABLE Updates available" &&
