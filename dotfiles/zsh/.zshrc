@@ -66,6 +66,7 @@ zstyle ':completion:*' list-prompt   ''
 zstyle ':completion:*' select-prompt ''
 
 # aliases
+alias trizen="yay"
 alias mutt="neomutt"
 alias muttorg="mutt"
 alias pm="trizen"
