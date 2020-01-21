@@ -42,36 +42,36 @@ inside the cloned repo-folder. Don't forget to copy the ~/.config/secretsrc.exam
 
 - Fonts
 
-	noto-fonts
-	noto-fonts-emoji
+    	noto-fonts
+	    noto-fonts-emoji
 
 - Editor
 
-	nvim
+	    nvim
 
 - Browser
 
-	firefox
+	    firefox
 
 - Sound
 
-    pulseaudio
-    pavucontrol
+        pulseaudio
+        pavucontrol
 
 - File Manager
 
-    ranger
+        ranger
 
 - Security
 
-    gnome-keyring
-    seahorse
+        gnome-keyring
+        seahorse
 
 - Images
 
-    sxiv
-    scrot
-    xwallpaper
+        sxiv
+        scrot
+        xwallpaper
 
 - Music
         
@@ -92,10 +92,12 @@ inside the cloned repo-folder. Don't forget to copy the ~/.config/secretsrc.exam
         (I also recommend mutt-wizard by luke smith)
 
 - News
-	newsboat
+	    
+        newsboat
 
   Calendar
-    calcurse
+        
+        calcurse
 
 - Utilities
 
