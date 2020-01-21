@@ -6,7 +6,7 @@ export PATH=$HOME/.local/bin:$HOME/.local/bin/games:/usr/local/bin:$PATH
 export ZDOTDIR="$HOME/.config/zsh"
 
 # HIGHDPI
-export GDK_SCALE=2
+#export GDK_SCALE=2
 #export GDK_DPI_SCALE=1.75
 
 # standard programms
