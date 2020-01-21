@@ -4,10 +4,10 @@ Here are my Linux dotfiles. They are made for Arch Linux but should also work on
 
 #### Installation
 
-In the Example I use Arch Linux with the AUR Package Manager `aur`. The Dependencies can be installed with
+In the Example I use Arch Linux with the AUR Package Manager `yay`. The Dependencies can be installed with
 
 `
-    aur -S nvim git stow xorg-server xorg-xinit i3-gaps i3blocks i3lock picom dmenu dunst st zsh zsh-completions zsh-syntax-highlighting pulseaudio pavucontrol ranger gnome-keyring seahorse sxiv xwallpaper scrot mpd mpc ncmpcpp mpv neomutt offlineimap msmtp dialog htop networkmanager wget curl firefox chronie acpid dbus avahi noto-fonts noto-fonts-emoji newsboat calcurse zathura zathura-pdf-mpdf
+    yay -S nvim git stow xorg-server xorg-xinit i3-gaps i3blocks i3lock picom dmenu dunst st zsh zsh-completions zsh-syntax-highlighting pulseaudio pavucontrol ranger gnome-keyring seahorse sxiv xwallpaper scrot mpd mpc ncmpcpp mpv neomutt offlineimap msmtp dialog htop networkmanager wget curl firefox chronie acpid dbus avahi noto-fonts noto-fonts-emoji newsboat calcurse zathura zathura-pdf-mpdf
 `
 
 After that you can clone the repository and install the dotfiles with
