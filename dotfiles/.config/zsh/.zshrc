@@ -1,16 +1,15 @@
-source ~/.config/secretsrc
+# Setting up aliases
+[ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
 
 # EXPORT PATH 
 export PATH=$HOME/.scripts/utils:$HOME/bin:$HOME/bin/games:/usr/local/bin:$PATH
-
-[ -f "$HOME/.config/aliasrc" ] && source $HOME/.config/aliasrc
 
 # theming
 show_user_host() {
   echo "%F{red}[%F{yellow}%n%F{green}@%F{blue}%M %F{magenta}%~%F{red}]%F{white}"
 }
 
-PROMPT=$(show_user_host)%F{blue}'${vcs_info_msg_0_}'$'\n'%F{white}"$ "%{$resetcolor%}
+PS1=$(show_user_host)%F{blue}'${vcs_info_msg_0_}'$'\n'%F{white}"$ "%{$resetcolor%}
 
 #COLORS
 autoload -U colors && colors
