@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ls ~/.local/bin/games | dmenu -l 30 | sh

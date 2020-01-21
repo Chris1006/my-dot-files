@@ -1,0 +1,31 @@
+
+# aliases
+alias v="nvim"
+alias e="nvim"
+
+alias g="git"
+alias pm="yay"
+
+alias vim="nvim"
+alias trizen="yay"
+alias mutt="neomutt"
+alias muttorg="mutt"
+alias sudo="sudo "
+alias sv="systemctl"
+alias sysud="trizen -Syyu && pkill -RTMIN+13 i3blocks"
+alias ls="ls --color=tty --group-directories-first -hN"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias tm="tmux attach 2> /dev/null || tmux new"
+alias ll="ls -l"
+alias lal="ls -al"
+
+alias rm="rm -v"
+alias mv="mv -iv"
+alias cp="cp -iv"
+
+
+alias confi3="$EDITOR ~/.config/i3/config"
+alias confzsh="$EDITOR ~/.config/zsh/.zshrc"
+alias confi3blocks"$EDITOR ~/.config/i3blocks/config"
+
