@@ -1,5 +1,8 @@
 #!/bin/sh
 
+[ -f "$HOME/.config/secretsrc" ] && . $HOME/.config/secretsrc
+[ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
+
 # EXPORT PATH
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$PATH
 

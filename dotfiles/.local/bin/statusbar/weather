@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 API_KEY=$WEATHER_API_KEY
 CITY=$WEATHER_CITY
 
