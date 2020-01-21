@@ -1,8 +1,12 @@
 #!/bin/sh
 
-current_ip_addr=`ip addr show wlp58s0 | grep -E "inet " | awk '{ print $2 } END { if (!NR) print "offline" } '`
+CURRENT_IP_ADDR=`hostname -i`
 
-echo "$current_ip_addr"
+case "127" in $CURRENT_IP_ADDR*)
+    CURRENT_IP_ADDR="offline"
+esac;
+
+echo "$CURRENT_IP_ADDR"
 
 case $BLOCK_BUTTON in
   1) "$TERMINAL" -e nmtui;;
