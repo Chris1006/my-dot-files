@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # EXPORT PATH
-export PATH=$HOME/.local/bin:$HOME/.local/bin/games:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$PATH
 
 export ZDOTDIR="$HOME/.config/zsh"
 
