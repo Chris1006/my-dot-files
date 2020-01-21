@@ -22,9 +22,9 @@ inside the cloned repo-folder. Don't forget to copy the ~/.config/secretsrc.exam
 
 Insert the following Entries to crontab
 
-        */15 * * * * /home/chris/.local/bin/newsup
-        */15 * * * * /home/chris/.local/bin/calcurse-caldav
-        */1 * * * * /home/chris/.local/bin/checkupdates
+        */15 * * * * $HOME/.local/bin/newsup
+        */15 * * * * $HOME/.local/bin/calcurse-caldav
+        */1  * * * * $HOME/.local/bin/checkupdates
         */15 * * * * export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus; export DISPLAY=:0; . $HOME/.profile; /usr/local/bin/mailsync
 
 This enables auto-updating news, calcurse (sync with caldav), updates and mails
