@@ -1,4 +1,4 @@
-#files: 914	version: 5.7.1
+#files: 909	version: 5.7.1
 
 _comps=(
 '-' '_precommand'
@@ -103,6 +103,7 @@ _comps=(
 'brctl' '_brctl'
 'bsdgrep' '_grep'
 'bsdtar' '_tar'
+'bspc' '_bspc'
 'btdownloadcurses' '_bittorrent'
 'btdownloadgui' '_bittorrent'
 'btdownloadheadless' '_bittorrent'
@@ -265,9 +266,6 @@ _comps=(
 'dmesg' '_dmesg'
 'dmidecode' '_dmidecode'
 'doas' '_doas'
-'docker' '_docker'
-'docker-compose' '_docker-compose'
-'dockerd' '_docker'
 'docpad' '_docpad'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
@@ -337,7 +335,6 @@ _comps=(
 'fc-match' '_xft_fonts'
 'feh' '_feh'
 'fetchmail' '_fetchmail'
-'ffcast' '_ffcast'
 'ffind' '_ffind'
 'ffmpeg' '_ffmpeg'
 'fg' '_jobs_fg'
@@ -682,6 +679,7 @@ _comps=(
 'keystone' '_openstack'
 'keytool' '_java'
 'kfmclient' '_kfmclient'
+'khard' '_khard'
 'kill' '_kill'
 'killall' '_killall'
 'killall5' '_killall'
@@ -907,8 +905,6 @@ _comps=(
 'numfmt' '_numfmt'
 'nvim' '_vim'
 'nvm' '_nvm'
-'_nvme' '_nvme'
-'nvme' '_nvme'
 'objdump' '_objdump'
 'od' '_od'
 'ogg123' '_vorbis'
@@ -939,7 +935,6 @@ _comps=(
 'parec' '_pulseaudio'
 'parecord' '_pulseaudio'
 'pass' '_pass'
-'pass-import' '_pass-import'
 'passwd' '_users'
 'paste' '_paste'
 'pasuspender' '_pulseaudio'
@@ -989,7 +984,6 @@ _comps=(
 'pkcon' '_pkcon'
 'pkgadd' '_pkgadd'
 'pkg-config' '_pkg-config'
-'pkgfile' '_pkgfile'
 'pkginfo' '_pkginfo'
 'pkgrm' '_pkgrm'
 'pkill' '_pgrep'
@@ -1054,7 +1048,6 @@ _comps=(
 'pstotgif' '_pspdf'
 'pswrap' '_postscript'
 'pulseaudio' '_pulseaudio'
-'pulseaudio-ctl' '_pulseaudio-ctl'
 'pump' '_pump'
 'pushd' '_cd'
 'pwait' '_pids'
@@ -1471,7 +1464,6 @@ _comps=(
 'VBoxHeadless' '_virtualbox'
 'VBoxManage' '_virtualbox'
 'vcsh' '_vcsh'
-'vifm' '_vifm'
 'vim' '_vim'
 'vimdiff' '_vim'
 'virsh' '_libvirt'
@@ -1753,39 +1745,38 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _afew _android _archlinux-java _artisan _atach \
-            _bitcoin-cli _bluetoothctl _bootctl _bower _bundle \
-            _busctl _caffeinate _cap _cask _ccache \
-            _cf _cheat _choc _chromium _cmake \
-            _coffee _composer _conan _concourse _console \
-            _coredumpctl _curl _dad _debuild _dget \
-            _dhcpcd _diana _docker _docker-compose _docpad \
-            _drush _ecdsautil _email-notmuch _emulator _envdir \
-            _exportfs _fab _ffcast _ffind _fleetctl \
-            _flutter _force _fwupdmgr _gas _ghc \
-            _gist _git-flow _git-journal _git-pulls _git-wtf \
-            _glances _golang _google _gtk-launch _hledger \
-            _homestead _hostnamectl _httpie _ibus _include-what-you-use \
-            _inxi _jmeter _jmeter-plugins _jonas _journalctl \
-            _jrnl _kak _kernel-install _kitchen _knife \
+            _bitcoin-cli _bluetoothctl _bootctl _bower _bspc \
+            _bundle _busctl _caffeinate _cap _cask \
+            _ccache _cf _cheat _choc _chromium \
+            _cmake _coffee _composer _conan _concourse \
+            _console _coredumpctl _curl _dad _debuild \
+            _dget _dhcpcd _diana _docpad _drush \
+            _ecdsautil _email-khard _email-notmuch _emulator _envdir \
+            _exportfs _fab _ffind _fleetctl _flutter \
+            _force _fwupdmgr _gas _ghc _gist \
+            _git-flow _git-journal _git-pulls _git-wtf _glances \
+            _golang _google _gtk-launch _hledger _homestead \
+            _hostnamectl _httpie _ibus _include-what-you-use _inxi \
+            _jmeter _jmeter-plugins _jonas _journalctl _jrnl \
+            _kak _kernel-install _khard _kitchen _knife \
             _language_codes _libinput _localectl _loginctl _lunchy \
             _machinectl _middleman _mina _mix _mkinitcpio \
             _mpv _mussh _mvn _nano _netctl \
             _networkctl _nftables _node _notmuch _nvm \
-            _nvme _openssl _optirun _pacman _pass \
-            _pass-import _patool _perf _periscope _pgsql_utils \
-            _phing _pixz _pkcon _pkgfile _play \
-            _pm2 _port _pulseaudio _pulseaudio-ctl _pygmentize \
-            _rails _ralio _redis-cli _resolvectl _rfkill \
-            _rkt _rslsync _rspec _rsvm _rubocop \
-            _sbt _scala _scrub _sdd _sd_hosts_or_user_at_host \
-            _sd_machines _sd_outputmodes _sd_unit_files _setcap _setup.py \
-            _sfdx _showoff _srm _stack _subl \
-            _subliminal _supervisorctl _svm _systemctl _systemd \
-            _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-run \
-            _systemd-tmpfiles _tarsnap _teamocil _thor _timedatectl \
-            _tmuxinator _tmuxp _tox _trash-empty _trash-list \
-            _trash-put _trash-restore _udevadm _udiskie _udiskie-mount \
-            _udiskie-umount _udisksctl _ufw _vagrant _vifm \
+            _openssl _optirun _pacman _pass _patool \
+            _perf _periscope _pgsql_utils _phing _pixz \
+            _pkcon _play _pm2 _port _pulseaudio \
+            _pygmentize _rails _ralio _redis-cli _resolvectl \
+            _rfkill _rkt _rslsync _rspec _rsvm \
+            _rubocop _sbt _scala _scrub _sdd \
+            _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files _setcap \
+            _setup.py _sfdx _showoff _srm _stack \
+            _subl _subliminal _supervisorctl _svm _systemctl \
+            _systemd _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn \
+            _systemd-run _systemd-tmpfiles _tarsnap _teamocil _thor \
+            _timedatectl _tmuxinator _tmuxp _tox _trash-empty \
+            _trash-list _trash-put _trash-restore _udevadm _udiskie \
+            _udiskie-mount _udiskie-umount _udisksctl _ufw _vagrant \
             _virtualbox _vnstat _wemux _wg-quick _xinput \
             _xsel _xss-lock _xwallpaper _yaourt _yarn \
             _yay _youtube-dl _zathura _zcash-cli _cdr \
