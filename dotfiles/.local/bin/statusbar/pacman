@@ -8,6 +8,6 @@ fi
 
 case $BLOCK_BUTTON in
   1)
-    "$TERMINAL" -e trizen -Syyu && $HOME/.scripts/checkupdates
+    "$TERMINAL" -e yay -Syyu && $HOME/.local/bin/checkupdates
 ;;
 esac

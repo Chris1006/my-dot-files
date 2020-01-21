@@ -1,6 +1,6 @@
 #!/bin/sh
 
-UPDATESAVAILABLE=$(trizen -Syy > /dev/null && trizen -Qu | grep -v "\[ignored\]" | wc -l )
+UPDATESAVAILABLE=$(yay -Syy > /dev/null && yay -Qu | grep -v "\[ignored\]" | wc -l )
 
 if [ $UPDATESAVAILABLE != "0" ]; then
 	echo ${UPDATESAVAILABLE:0:1}
