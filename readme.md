@@ -4,10 +4,10 @@ Here are my Linux dotfiles. They are made for Arch Linux but should also work on
 
 #### Installation
 
-In the Example I use Arch Linux with the AUR Package Manager `trizen`. The Dependencies can be installed with
+In the Example I use Arch Linux with the AUR Package Manager `aur`. The Dependencies can be installed with
 
 `
-    trizen -S vim git stow xorg-server xorg-xinit i3-gaps i3blocks i3lock dmenu dunst st zsh zsh-completions pulseaudio pavucontrol ranger gnome-keyring seahorse feh sxiv scrot mpd mpc ncmpcpp mplayer neomutt offlineimap msmtp dialog htop networkmanager wget curl chromium chronie acpid dbus avahi noto-fonts noto-fonts-emoji newsboat
+    aur -S nvim git stow xorg-server xorg-xinit i3-gaps i3blocks i3lock picom dmenu dunst st zsh zsh-completions zsh-syntax-highlighting pulseaudio pavucontrol ranger gnome-keyring seahorse sxiv xwallpaper scrot mpd mpc ncmpcpp mpv neomutt offlineimap msmtp dialog htop networkmanager wget curl firefox chronie acpid dbus avahi noto-fonts noto-fonts-emoji newsboat calcurse zathura zathura-pdf-mpdf
 `
 
 After that you can clone the repository and install the dotfiles with
@@ -16,7 +16,7 @@ After that you can clone the repository and install the dotfiles with
 stow * -t ~
 `
 
-inside the cloned repo-folder. Don't forget to copy the ~/.reg_env_vars.example and set your env-vars and to install your video driver for Xorg.
+inside the cloned repo-folder. Don't forget to copy the ~/.config/secretsrc.example and set your env-vars and to install your video driver for Xorg.
 
 #### Dependencies in detail
 
@@ -31,13 +31,14 @@ inside the cloned repo-folder. Don't forget to copy the ~/.reg_env_vars.example 
         i3lock
         dmenu
         dunst
-        compton
+        picom
 
 - Terminal && Shell
 
         st (I recommend my patched repository)
         zsh
         zsh-completions
+        zsh-syntax-highlighting
 
 - Fonts
 
@@ -46,31 +47,31 @@ inside the cloned repo-folder. Don't forget to copy the ~/.reg_env_vars.example 
 
 - Editor
 
-	vim
+	nvim
 
 - Browser
 
-	chromium
+	firefox
 
 - Sound
 
-        pulseaudio
-        pavucontrol
+    pulseaudio
+    pavucontrol
 
 - File Manager
 
-        ranger
+    ranger
 
 - Security
 
-        gnome-keyring
-        seahorse
+    gnome-keyring
+    seahorse
 
 - Images
 
-        feh
-        sxiv
-        scrot
+    sxiv
+    scrot
+    xwallpaper
 
 - Music
         
@@ -80,7 +81,7 @@ inside the cloned repo-folder. Don't forget to copy the ~/.reg_env_vars.example 
 
 - Video
 
-        mplayer
+        mvc
 
 - Mail
 
@@ -92,6 +93,9 @@ inside the cloned repo-folder. Don't forget to copy the ~/.reg_env_vars.example 
 
 - News
 	newsboat
+
+  Calendar
+    calcurse
 
 - Utilities
 
