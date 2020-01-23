@@ -1,4 +1,19 @@
-http://lukesmith.xyz/rss.xml
-https://notrelated.libsyn.com/rss
+-----------------------------
+------------Linux-Related----
+-----------------------------
+http://lukesmith.xyz/rss.xml "~lukesmith.xyz"
+https://www.archlinux.org/feeds/news/ "tech" "~Arch News"
+https://unix.stackexchange.com/feeds "~Unix Stackexchange"
+-----------------------------
+------------Youtube----------
+-----------------------------
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
-https://www.archlinux.org/feeds/news/ "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~Distro Tube (YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnZIn_CYjz0ErPs1ktH-2lQ "~Unicks.eu (YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCg6gPGh8HU2U01vaFCAsvmQ "~Chris Titus Tech (YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCdHDE389WqZX-TP6wPN1Llg "~Marcus-S (YouTube)"
+-----------------------------
+------------Reddit-----------
+-----------------------------
+https://www.reddit.com/r/archlinux.rss "~Arch Linux (Reddit)"
+https://www.reddit.com/r/unixporn.rss "~Unix Porn (Reddit)"
