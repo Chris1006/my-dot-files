@@ -18,6 +18,17 @@ stow * -t ~
 
 inside the cloned repo-folder. Don't forget to copy the ~/.config/secretsrc.example and set your env-vars and to install your video driver for Xorg.
 
+#### Usefull Hints
+
+Insert the following Entries to crontab
+
+        */15 * * * * $HOME/.local/bin/newsup
+        */15 * * * * $HOME/.local/bin/calcurse-caldav
+        */1  * * * * $HOME/.local/bin/checkupdates
+        */15 * * * * export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus; export DISPLAY=:0; . $HOME/.profile; /usr/local/bin/mailsync
+
+This enables auto-updating news, calcurse (sync with caldav), updates and mails
+
 #### Dependencies in detail
 
 - GIT (of course)

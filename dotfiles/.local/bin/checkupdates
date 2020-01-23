@@ -1,11 +1,11 @@
 #!/bin/sh
 
-UPDATESAVAILABLE=$(trizen -Syy > /dev/null && trizen -Qu | grep -v "\[ignored\]" | wc -l )
+UPDATESAVAILABLE=$(yay -Syy > /dev/null && yay -Qu | grep -v "\[ignored\]" | wc -l )
 
 if [ $UPDATESAVAILABLE != "0" ]; then
-	echo ${UPDATESAVAILABLE:0:1}
-	echo "$UPDATESAVAILABLE" > /tmp/updatesavailable &&
-	notify-send "$UPDATESAVAILABLE Updates available" &&
+	echo $UPDATESAVAILABLE
+	echo "$UPDATESAVAILABLE" > /tmp/updatesavailable
+	notify-send "$UPDATESAVAILABLE Updates available"
 	pkill -RTMIN+13 i3blocks
 elif [ -f /tmp/updatesavailable ]; then
 	rm /tmp/updatesavailable &&
