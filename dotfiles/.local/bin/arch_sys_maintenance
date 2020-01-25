@@ -1,0 +1,32 @@
+#!/bin/sh
+
+clear
+
+echo "Searching for unused Packages. Press Enter to Continue"
+
+read INPUT
+
+yay -Rns $(yay -Qtdq) 2> /dev/null
+
+echo "Ready"
+
+read INPUT
+
+clear
+
+echo "removing cache from user directory. Press Enter to Continue"
+
+read INPUT
+
+rm -rf ~/.cache/*
+
+echo "Ready"
+
+read INPUT
+
+echo "$(systemctl --failed) Services failed"
+echo "Press Enter to watch Log files in Journal"
+
+read INPUT
+
+journalctl -p 3 -xb
