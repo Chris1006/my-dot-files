@@ -3,6 +3,7 @@ new_window	1pixel
 #gaps inner 5
 #gaps outer 0
 #smart_gaps on
+smart_borders on
 
 # font configuration
 font pango:FontAwesome 10, Noto Sans Mono 10

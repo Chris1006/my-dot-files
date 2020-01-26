@@ -9,6 +9,6 @@ print_temp_table() {
   done
 }
 
-cpu_temp=`print_temp_table   |  sed 's/\(.\)..$/.\1°C/' | awk '{print $2}' | head -n1`
+cpu_temp=`print_temp_table   | grep temp | sed 's/\(.\)..$/.\1°C/' | awk '{print $2}' | head -n1`
 
 echo "$cpu_temp"
