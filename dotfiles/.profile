@@ -11,6 +11,7 @@ export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
 export LESSHISTFILE="-"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
 # HIGHDPI
 export GDK_SCALE=2
