@@ -20,7 +20,7 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 # standard programms
 export VISUAL=nvim
 export EDITOR=$VISUAL
-export BROWSER="firefox"
+export BROWSER="brave"
 export TERMINAL="st"
 export TERM=$TERMINAL
 export DIFFPROG="nvim -d"
