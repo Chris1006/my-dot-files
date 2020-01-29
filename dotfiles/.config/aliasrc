@@ -13,7 +13,7 @@ alias mutt="neomutt"
 alias muttorg="mutt"
 alias sudo="sudo "
 alias sv="systemctl"
-alias sysud="trizen -Syyu && pkill -RTMIN+13 i3blocks"
+alias sysud="yay -Syyu && pkill -RTMIN+13 i3blocks"
 alias ls="ls --color=tty --group-directories-first -hNv"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
@@ -24,6 +24,9 @@ alias lal="ls -al"
 alias rm="rm -v"
 alias mv="mv -iv"
 alias cp="cp -iv"
+
+alias yt="youtube-dl --add-metadata -i -f bestaudio/best"
+alias yta="yt -x --audio-format mp3"
 
 alias trc="transmission-remote-cli"
 

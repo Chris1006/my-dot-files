@@ -7,6 +7,10 @@
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$PATH
 
 export ZDOTDIR="$HOME/.config/zsh"
+export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
+export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
+export LESSHISTFILE="-"
 
 # HIGHDPI
 #export GDK_SCALE=2
@@ -18,6 +22,7 @@ export EDITOR=$VISUAL
 export BROWSER="firefox"
 export TERMINAL="st"
 export TERM=$TERMINAL
+export DIFFPROG="nvim -d"
 
 #setting up dotnet core paths
 if [ -d "/opt/dotnet" ]; then
