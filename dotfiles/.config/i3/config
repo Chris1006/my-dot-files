@@ -130,7 +130,7 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+d exec dmenu_run
 bindsym $mod+b exec --no-startup-id $BROWSER
 bindsym $mod+m exec $TERMINAL -e neomutt
-bindsym $mod+c exec $TERMINAL -e calcurse
+bindsym $mod+c exec $TERMINAL -e calcurse -D ~/.config/calcurse
 bindsym $mod+n exec $TERMINAL -e newsboat
 bindsym $mod+Shift+b exec --no-startup-id tor-browser
 bindsym $mod+t exec $TERMINAL -e transmission-remote-cli
