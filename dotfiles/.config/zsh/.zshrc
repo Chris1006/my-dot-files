@@ -67,3 +67,6 @@ zstyle ':completion:*' select-prompt ''
 
 # ZSH Syntax highlighting => must be at end of file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# run pfetch
+pfetch
