@@ -146,6 +146,11 @@ bindsym $mod+F5		exec --no-startup-id dmenumount
 bindsym $mod+F3		exec --no-startup-id displayselect
 bindsym XF86Display		exec --no-startup-id displayselect
 
+# Screenshots
+bindsym --release Print exec scrot "$HOME/Bilder/screenshots/$(date +"%Y_%m_%d_%I_%M_%S").png"
+bindsym --release Shift+Print exec scrot -s "$HOME/Bilder/screenshots/$(date +"%Y_%m_%d_%I_%M_%S").png"
+
+
 # Audio Control
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 "$(~/.local/bin/statusbar/volume-new)" && pkill -RTMIN+10 i3blocks #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 "$(~/.local/bin/statusbar/volume-new)" && pkill -RTMIN+10 i3blocks #decrease sound volume
