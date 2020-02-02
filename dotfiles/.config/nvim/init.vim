@@ -1,6 +1,6 @@
 syntax  on
 set nowrap
-set encoding=utf8
+set encoding=UTF-8
 set number
 set relativenumber
 
