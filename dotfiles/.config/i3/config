@@ -6,7 +6,7 @@ new_window	1pixel
 smart_borders on
 
 # font configuration
-font pango:FontAwesome 10, Noto Sans Mono 10
+font pango:FontAwesome 11, Fura Code Nerd Font 11
 
 # color theme (dracula)
 set $base00 #282936

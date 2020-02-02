@@ -8,7 +8,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-
 " vi:syntax=vim
 call plug#begin()
 
