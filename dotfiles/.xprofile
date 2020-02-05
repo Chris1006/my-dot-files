@@ -5,7 +5,7 @@
 xrandr --dpi 168 &
 mpd &
 setbg &
-picom -b &
+#picom -b &
 udiskie &
 dunst &
 ~/.local/bin/start-gnome-keyring &
