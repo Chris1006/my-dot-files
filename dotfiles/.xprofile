@@ -2,7 +2,7 @@
 
 [ -f ~/.config/secretsrc ] && source ~/.config/secretsrc
 
-xrandr --dpi 168 &
+xrandr --dpi 192 &
 mpd &
 setbg &
 picom -b &
