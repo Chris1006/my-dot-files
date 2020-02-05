@@ -26,7 +26,7 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 
 
-colorscheme base16-dracula
+" #colorscheme base16-dracula
 
 " Nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
