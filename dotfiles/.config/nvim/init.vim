@@ -17,7 +17,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 
@@ -26,7 +26,7 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 
 
-colorscheme base16-dracula
+" #colorscheme base16-dracula
 
 " Nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
