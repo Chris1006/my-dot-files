@@ -7,52 +7,57 @@ smart_borders on
 
 # font configuration
 font pango:FontAwesome 11, Fura Code Nerd Font 11
+#######
+#THEME#
+#######
 
-# color theme (dracula)
-set $base00 #282936
-set $base01 #3a3c4e
-set $base02 #626483
-set $base03 #4d4f68
-set $base04 #62d6e8
-set $base05 #e9e9f4
-set $base06 #f1f2f8
-set $base07 #f7f7fb
-set $base08 #ea51b2
-set $base09 #b45bcf
-set $base0A #ebff87
-set $base0B #00f769
-set $base0C #a1efe4
-set $base0D #62d6e8
-set $base0E #b45bcf
-set $base0F #00f769
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
 
-# Basic bar configuration using the Base16 variables.
+
+#start of bar section
 bar {
-    status_command i3blocks
     position top
+    status_command i3blocks
     colors {
-        background $base00
-        separator  $base01
-        statusline $base04
-
-        # State             Border  BG      Text
-        focused_workspace   $base05 $base0D $base00
-        active_workspace    $base05 $base03 $base00
-        inactive_workspace  $base03 $base01 $base05
-        urgent_workspace    $base08 $base08 $base00
-        binding_mode $base00 $base0A $base00
+        # bar background color
+        background $bg
+        # text color used for blocks that do not have a color specified.
+        statusline $yellow
+        # workspaces section            
+        #                    border  backgr. text
+        focused_workspace    $aqua $aqua $darkgray
+        inactive_workspace   $darkgray $darkgray $yellow
+        active_workspace     $darkgray $darkgray $yellow
+        urgent_workspace     $red $red $bg
     }
 }
+#end of bar section
 
-# Basic color configuration using the Base16 variables for windows and borders.
-# Property Name         Border  BG      Text    Indicator Child Border
-client.focused          $base05 $base0D $base00 $base0D $base0D
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
+#start of window title bars & borders section
 
-client.background       $base07
+# green gruvbox
+# class                 border|backgr|text|indicator|child_border
+#client.focused          $green $green $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+client.focused          $blue $blue $darkgray $purple $gray
+client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.urgent           $red $red $white $red $red
+
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
