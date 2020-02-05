@@ -25,16 +25,5 @@ export TERMINAL="st"
 export TERM=$TERMINAL
 export DIFFPROG="nvim -d"
 
-#setting up dotnet core paths
-if [ -d "/opt/dotnet" ]; then
-    export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
-    export PATH=$MSBuildSDKsPath:$PATH
-
-    
-    # Add .NET Core SDK tools
-    [ -f "$HOME/.dotnet/tools" ] && export PATH="$PATH:$HOME/.dotnet/tools"
-fi
-
-
 # start x
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
