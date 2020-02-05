@@ -1,9 +1,6 @@
 # Setting up aliases
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
 
-# EXPORT PATH 
-export PATH=$HOME/.scripts/utils:$HOME/bin:$HOME/bin/games:/usr/local/bin:$PATH
-
 #COLORS
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}"$'\n'"$%b "
