@@ -31,8 +31,3 @@ alias yta="yt -x --audio-format mp3"
 alias trc="transmission-remote-cli"
 
 alias calcurse="calcurse -D ~/.config/calcurse"
-
-alias confi3="$EDITOR ~/.config/i3/config"
-alias confzsh="$EDITOR ~/.config/zsh/.zshrc"
-alias confi3blocks="$EDITOR ~/.config/i3blocks/config"
-
