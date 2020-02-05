@@ -25,5 +25,8 @@ export TERMINAL="st"
 export TERM=$TERMINAL
 export DIFFPROG="nvim -d"
 
+alias dmenu="dmenu -nb '282828' -nf 'ebdbb2' -sb '458588' -sf '282828'"
+
+
 # start x
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
