@@ -1,0 +1,9 @@
+alias ba="$EDITOR=~/.config/aliasrc"
+alias cfz="$EDITOR ~/.config/zsh/.zshrc" 
+alias cfv="$EDITOR ~/.config/nvim/init.vim" 
+alias cfi="$EDITOR ~/.config/i3/config" 
+alias cfb="$EDITOR ~/.config/i3blocks/config" 
+alias cfm="$EDITOR ~/.config/mutt/muttrc"
+alias cfu="$EDITOR ~/.config/newsboat/urls"
+alias cfn="$EDITOR ~/.config/newsboat/config"
+

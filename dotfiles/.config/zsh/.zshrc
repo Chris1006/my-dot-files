@@ -1,5 +1,6 @@
 # Setting up aliases
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
+[ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
 
 #COLORS
 autoload -U colors && colors
@@ -91,5 +92,5 @@ echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;}
 
 # ZSH Syntax highlighting => must be at end of file
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
