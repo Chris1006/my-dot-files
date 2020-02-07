@@ -20,6 +20,8 @@ alias diff="diff --color=auto"
 alias tm="tmux attach 2> /dev/null || tmux new"
 alias ll="ls -l"
 alias lal="ls -al"
+alias du="du -h"
+alias df="df -h"
 
 alias rm="rm -v"
 alias mv="mv -iv"
