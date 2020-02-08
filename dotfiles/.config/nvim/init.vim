@@ -2,12 +2,17 @@ syntax  on
 set nowrap
 set encoding=UTF-8
 set number
+set ruler
 set relativenumber
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set smarttab
 
+set laststatus=2
+
+set cursorline
 " vi:syntax=vim
 call plug#begin()
 
@@ -20,6 +25,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Townk/vim-autoclose'
 
 Plug 'mxw/vim-jsx'
 
@@ -27,7 +37,7 @@ call plug#end()
 
 
 " #colorscheme base16-dracula
-
+let base16colorspace=256 
 " Nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
