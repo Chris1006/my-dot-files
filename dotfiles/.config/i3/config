@@ -137,6 +137,7 @@ bindsym $mod+c exec $TERMINAL -e calcurse -D ~/.config/calcurse
 bindsym $mod+n exec $TERMINAL -e newsboat
 bindsym $mod+Shift+b exec --no-startup-id tor-browser
 bindsym $mod+t exec $TERMINAL -e transmission-remote-cli
+bindsym $mod+p exec $TERMINAL -e ncmpcpp
 
 # lock screen
 bindsym $mod+Shift+x exec ~/.local/bin/lockscreen

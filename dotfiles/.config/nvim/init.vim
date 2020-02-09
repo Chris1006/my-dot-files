@@ -4,6 +4,7 @@ set encoding=UTF-8
 set number
 set ruler
 set relativenumber
+set clipboard=unnamed
 
 set tabstop=4
 set shiftwidth=4
