@@ -3,6 +3,8 @@
 [ -f ~/.config/secretsrc ] && source ~/.config/secretsrc
 
 xrandr --dpi 192 &
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+
 mpd &
 setbg &
 picom -b &
