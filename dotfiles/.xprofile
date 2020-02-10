@@ -7,7 +7,7 @@ dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XA
 
 mpd &
 setbg &
-picom -b &
+xcompmgr &
 unclutter &
 udiskie &
 dunst &
