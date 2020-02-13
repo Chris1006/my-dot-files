@@ -6,6 +6,10 @@ interval=
 command=~/.local/bin/statusbar/music
 label=🎵
 
+[moonphase]
+interval=3600
+command=~/.local/bin/statusbar/moonphase
+
 [weather]
 interval=60
 command=~/.local/bin/statusbar/weather
