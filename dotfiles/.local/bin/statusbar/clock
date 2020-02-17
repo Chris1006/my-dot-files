@@ -8,5 +8,5 @@ show_current_datetime() {
 show_current_datetime
 
 case $BLOCK_BUTTON in
-    1) "$TERMINAL" -e calcurse ;;
+    1) "$TERMINAL" -e calcurse -D $HOME/.config/calcurse ;;
 esac
