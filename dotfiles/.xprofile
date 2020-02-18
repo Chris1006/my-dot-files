@@ -5,7 +5,6 @@
 xrandr --dpi 192 &
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
-mpd &
 setbg &
 #xcompmgr &
 picom -b &

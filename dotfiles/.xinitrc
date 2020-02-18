@@ -2,6 +2,4 @@
 
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-~/.config/secretsrc
-
 exec i3

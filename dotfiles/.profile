@@ -2,6 +2,7 @@
 
 [ -f "$HOME/.config/secretsrc" ] && . $HOME/.config/secretsrc
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
+[ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
 
 # EXPORT PATH
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$PATH
@@ -27,6 +28,8 @@ export DIFFPROG="nvimdiff"
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
+
+mpd >/dev/null 2>&1 &
 
 # start x
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
