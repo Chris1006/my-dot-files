@@ -101,8 +101,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # modi
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+Shift+v split h ;; exec $TERMINAL
+bindsym $mod+v split v ;; exec $TERMINAL
 
 bindsym $mod+f fullscreen toggle
 
@@ -118,6 +118,11 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
 bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
@@ -126,6 +131,11 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 bindsym $mod+Shift+q kill
 
