@@ -1,4 +1,5 @@
 # Setting up aliases
+
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
 [ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
 
