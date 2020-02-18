@@ -29,7 +29,8 @@ export DIFFPROG="nvimdiff"
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
-mpd >/dev/null 2>&1 &
+# Start mpd if not running
+[ ! -f $HOME/.config/mpd/mpd.pid ] && mpd >/dev/null 2>&1 &
 
 # start x
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx > /dev/null; fi

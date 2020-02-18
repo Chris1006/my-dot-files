@@ -3,9 +3,8 @@
 NEWMAIL="$(du -a ~/.local/share/mail/*/INBOX/new/* 2> /dev/null | sed -n '$=')$(cat ~/.config/mutt/.dl 2>/dev/null)" 
 
 if [ -z $NEWMAIL ]; then
-    exit -1
+    exit
 fi
-
 echo $NEWMAIL
 
 case $BLOCK_BUTTON in

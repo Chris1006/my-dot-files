@@ -6,7 +6,7 @@ choice_by_dmenu() {
 
 choice_by_dmenu
 
-[[ -z "$choice" ]] && exit 1
+[ -z "$choice" ] && exit 1
 
 case "$choice" in
   0) i3-msg exit now;;

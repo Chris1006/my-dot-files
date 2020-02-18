@@ -1,17 +1,15 @@
 #!/usr/bin/env sh
 
-[ -f ~/.config/secretsrc ] && source ~/.config/secretsrc
-
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
 #xrandr --dpi 168 &
 setbg &
 #xcompmgr &
-picom -b &
+picom -b > /dev/null &
 unclutter &
 udiskie &
 dunst &
 ~/.local/bin/start-gnome-keyring &
 xset s 300 0 &
 xss-lock --transfer-sleep-lock -- ~/.local/bin/lockscreen &
-xflux -l $XFLUX_LAT -g $XFLUX_LONG &
+xflux -l $XFLUX_LAT -g $XFLUX_LONG > /dev/null &
