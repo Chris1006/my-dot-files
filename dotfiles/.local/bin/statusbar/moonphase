@@ -1,17 +1,17 @@
 #!/bin/sh
 
-mnphs=$(pom | grep -io 'new\|waxing cresent\|first quarter\|waxing gibbous\|full\|waning gibbous\|last quarter\|waning cresent' | grep -m1 '.')
+mnphs=$(pom | grep -io 'new\|waxing crescent\|first quarter\|waxing gibbous\|full\|waning gibbous\|last quarter\|waning crescent' | grep -m1 '.')
 prcnt=$(pom | grep -o '..%')
 
 case $mnphs in
   	"New") icon="🌑" ;;
-	  "Waxing Cresent") icon="🌒" ;;
+	"Waxing Cresent") icon="🌒" ;;
   	"First Quarter") icon="🌓" ;;
-	  "Waxing Gibbous") icon="🌔" ;;
-	  "Full") icon="🌕" ;;
+    "Waxing Gibbous") icon="🌔" ;;
   	"Waning Gibbous") icon="🌖" ;;
   	"Last Quarter") icon="🌗" ;;
-  	"Waning Cresent") icon="🌘" ;;
+  	"Waning Crescent") icon="🌘" ;;
+    "Full") icon="🌕" ;;
 	  *) echo errorrrr ;;
 esac
 
