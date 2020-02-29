@@ -5,7 +5,7 @@ prcnt=$(pom | grep -o '..%')
 
 case $mnphs in
   	"New") icon="🌑" ;;
-	"Waxing Cresent") icon="🌒" ;;
+	"Waxing Crescent") icon="🌒" ;;
   	"First Quarter") icon="🌓" ;;
     "Waxing Gibbous") icon="🌔" ;;
   	"Waning Gibbous") icon="🌖" ;;
