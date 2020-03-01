@@ -9,6 +9,8 @@ picom -b > /dev/null &
 unclutter &
 udiskie &
 dunst &
+
+[ -f /usr/bin/nextcloud ] && nextcloud &&
 ~/.local/bin/start-gnome-keyring &
 xset s 300 0 &
 xss-lock --transfer-sleep-lock -- ~/.local/bin/lockscreen &
