@@ -9,12 +9,23 @@ export PATH=$HOME/platform-tools:$PATH
 # EXPORT PATH
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$PATH
 
-export ZDOTDIR="$HOME/.config/zsh"
-export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
+
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+
+# clean up
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
 export LESSHISTFILE="-"
-export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export WGETRC="$HOME/.config/wget/wgetrc"
+export INPUTRC="$HOME/.config/inputrc"
+export ZDOTDIR="$HOME/.config/zsh"
+export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 
 # HIGHDPI
 #export GDK_SCALE=2
