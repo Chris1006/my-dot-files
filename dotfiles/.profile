@@ -4,6 +4,8 @@
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
 [ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
 
+export PATH=$HOME/platform-tools:$PATH
+
 # EXPORT PATH
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$PATH
 
