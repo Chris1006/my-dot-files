@@ -149,6 +149,7 @@ bindsym $mod+n exec $TERMINAL -e newsboat
 bindsym $mod+Shift+b exec --no-startup-id tor-browser
 bindsym $mod+t exec $TERMINAL -e transmission-remote-cli
 bindsym $mod+p exec $TERMINAL -e ncmpcpp
+bindsym $mod+Shift+f exec $TERMINAL -e ranger
 
 # lock screen
 bindsym $mod+Shift+x exec ~/.local/bin/lockscreen
