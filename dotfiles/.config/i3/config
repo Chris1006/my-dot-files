@@ -71,6 +71,22 @@ set $ws8 "8: "
 set $ws9 "9: "
 set $ws10 "10: "
 
+# window class settings
+assign [class="st"] $ws1
+assign [class="Brave"] $ws2
+assign [class="Code"] $ws3
+assign [class="ranger"] $ws4
+assign [class="discord"] $ws5
+assign [class="mpv"] $ws6
+assign [class="ncmpcpp"] $ws7
+assign [class="calcurse"] $ws8
+assign [class="newsboat"] $ws9
+assign [class="neomutt"] $ws10
+
+for_window [class="mpv"] floating enable
+for_window [class="discord"] floating enable
+for_window [class="Steam"] floating enable
+
 # mod key => win key
 set $mod Mod4
 
@@ -143,13 +159,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+d exec dmenu_run
 bindsym $mod+b exec --no-startup-id $BROWSER
-bindsym $mod+m exec $TERMINAL -e neomutt
-bindsym $mod+c exec $TERMINAL -e calcurse -D ~/.config/calcurse
-bindsym $mod+n exec $TERMINAL -e newsboat
+bindsym $mod+m exec $TERMINAL -c neomutt -e neomutt
+bindsym $mod+c exec $TERMINAL -c calcurse -e calcurse -D ~/.config/calcurse
+bindsym $mod+n exec $TERMINAL -c newsboat -e newsboat
 bindsym $mod+Shift+b exec --no-startup-id tor-browser
-bindsym $mod+t exec $TERMINAL -e transmission-remote-cli
-bindsym $mod+p exec $TERMINAL -e ncmpcpp
-bindsym $mod+Shift+f exec $TERMINAL -e ranger
+bindsym $mod+t exec $TERMINAL -c transmission -e transmission-remote-cli
+bindsym $mod+p exec $TERMINAL -c ncmpcpp -e ncmpcpp
+bindsym $mod+Shift+f exec $TERMINAL -c ranger -e ranger
 
 # lock screen
 bindsym $mod+Shift+x exec ~/.local/bin/lockscreen
