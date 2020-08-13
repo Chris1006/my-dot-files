@@ -1,7 +1,6 @@
-# window configuration
 new_window	1pixel
-#gaps inner 5
-#gaps outer 0
+gaps inner 5
+gaps outer 1
 #smart_gaps on
 smart_borders on
 
@@ -30,21 +29,25 @@ set $base0D #83a598
 set $base0E #d3869b
 set $base0F #d65d0e
 
+set $transp da
+
 #start of bar section
 bar {
+    i3bar_command i3bar --transparency
     position top
     status_command i3blocks
+    tray_padding 10
+    workspace_min_width 30
     colors {
-        background $base00
+        background $base00$transp
         separator  $base01
         statusline $base04
-
-        # State             Border  BG      Text
-        focused_workspace   $base05 $base0D $base00
-        active_workspace    $base05 $base03 $base00
-        inactive_workspace  $base03 $base01 $base05
-        urgent_workspace    $base08 $base08 $base00
-        binding_mode        $base00 $base0A $base00
+        # State             Border  BG             Text
+        focused_workspace   $base05 $base0D$transp $base00
+        active_workspace    $base05 $base03$transp $base00
+        inactive_workspace  $base03 $base01$transp $base05
+        urgent_workspace    $base08 $base08$transp $base00
+        binding_mode        $base00 $base0A$transp $base00
     }
 }
 #end of bar section
@@ -60,28 +63,28 @@ client.background       $base07
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
-set $ws7 "7: "
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws10 "10: "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # window class settings
-assign [class="st"] $ws1
-assign [class="Brave"] $ws2
-assign [class="Code"] $ws3
-assign [class="ranger"] $ws4
-assign [class="discord"] $ws5
-assign [class="mpv"] $ws6
-assign [class="ncmpcpp"] $ws7
-assign [class="calcurse"] $ws8
-assign [class="newsboat"] $ws9
-assign [class="neomutt"] $ws10
+#assign [class="st"] $ws1
+#assign [class="Firefox"] $ws2
+#assign [class="Code"] $ws3
+#assign [class="ranger"] $ws4
+#assign [class="discord"] $ws5
+#assign [class="mpv"] $ws6
+#assign [class="ncmpcpp"] $ws7
+#assign [class="calcurse"] $ws8
+#assign [class="newsboat"] $ws9
+#assign [class="neomutt"] $ws10
 
 for_window [class="mpv"] floating enable
 for_window [class="discord"] floating enable
@@ -117,8 +120,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # modi
-bindsym $mod+Shift+v split h ;; exec $TERMINAL
-bindsym $mod+v split v ;; exec $TERMINAL
+bindsym $mod+Shift+v split h 
+bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 

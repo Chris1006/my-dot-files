@@ -4,6 +4,7 @@
 http://lukesmith.xyz/rss.xml "~lukesmith.xyz"
 https://www.archlinux.org/feeds/news/ "tech" "~Arch News"
 https://unix.stackexchange.com/feeds "~Unix Stackexchange"
+https://suckless.org/atom.xml "~suckless.org"
 -----------------------------
 ------------Youtube----------
 -----------------------------

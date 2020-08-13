@@ -1,0 +1,12 @@
+#!/bin/sh
+
+show_date() {
+    current_date=`date +"%a %d.%m.%G"`
+    echo " $current_date"
+}
+
+show_date
+
+case $BLOCK_BUTTON in
+    1) "$TERMINAL" -e calcurse -D $HOME/.config/calcurse ;;
+esac

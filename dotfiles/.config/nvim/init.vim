@@ -6,18 +6,21 @@ set ruler
 set relativenumber
 set clipboard=unnamed
 
-set tabstop=4
+set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
 
 set laststatus=2
-
+set incsearch
 set cursorline
+set colorcolumn=80
+
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
 " vi:syntax=vim
 call plug#begin()
 
-Plug 'chriskempson/base16-vim'
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -31,14 +34,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Townk/vim-autoclose'
-
+Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx'
 
 call plug#end()
 
+colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 " #colorscheme base16-dracula
-let base16colorspace=256 
+" let base16colorspace=256 
 " Nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
