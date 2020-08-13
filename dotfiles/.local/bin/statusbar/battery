@@ -1,36 +1,32 @@
-#/bin/bash
+#/bin/sh
 
-battery_capacity=`cat /sys/class/power_supply/BAT0/capacity`
+BATTERY='/sys/class/power_supply/BAT0'
 
-show_discharging() {
-  acpi | awk '{ printf "%d%% %s\n",$4,$5 }' 
-}
+ICON_EMPTY=''
+ICON_QUARTER=''
+ICON_HALF=''
+ICON_THREEQUARTER=''
+ICON_FULL=''
+ICON_CHARGING=''
 
-show_charging() {
-  acpi | awk '{ printf "⚡%d%% %s\n",$4, $5 }'  
-}
+STATUS=$(sed "s/[Dd]ischarging/dc/;s/[Nn]ot charging/nc/;s/[Cc]harging/cc/;s/[Uu]nknown/uk/;s/[Ff]ull/ff/" $BATTERY'/status') 
+CAPACITY=$(cat $BATTERY'/capacity' 2>/dev/null)
 
-show_full() {
-  echo "⚡100% [FULL]"
-}
+ICON=''
 
-show_unknown() {
-  echo ""
-}
+if [ $STATUS = 'ff' ]; then
+    ICON=$ICON_FULL
+elif [ $STATUS = 'cc' ]; then
+    ICON=$ICON_CHARGING
+elif [ $CAPACITY -le 25 ]; then
+    ICON=$ICON_EMPTY
+elif [ $CAPACITY -le 50 ]; then
+    ICON=$ICON_QUARTER
+elif [ $CAPACITY -le 75 ]; then
+    ICON=$ICON_HALF
+elif [ $CAPACITY -le 99 ]; then
+    ICON=$ICON_THREEQUARTER
+fi
+    
+echo $ICON $CAPACITY'%' 
 
-status=`cat /sys/class/power_supply/BAT0/status`
-
-case $status in
-  Charging)
-    acpi | sed s/,//g | awk '{ printf "%s [%s]\n", $4, $5}'
-    ;;  
-  Discharging)
-    acpi | sed s/,//g | awk '{ printf "%s [%s]\n", $4, $5}'
-    ;;
-  Full)
-    show_full
-    ;;
-  *)
-    show_unknown
-    ;;
-esac

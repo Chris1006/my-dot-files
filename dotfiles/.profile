@@ -34,7 +34,7 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 # standard programms
 export VISUAL=nvim
 export EDITOR=$VISUAL
-export BROWSER="brave"
+export BROWSER="firefox-esr"
 export TERMINAL="st"
 export TERM=$TERMINAL
 export DIFFPROG="nvimdiff"
@@ -46,4 +46,10 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 [ ! -f $HOME/.config/mpd/mpd.pid ] && mpd >/dev/null 2>&1 &
 
 # start x
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx > /dev/null; fi
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec startx > /dev/null; 
+else
+    export TERM="linux"
+    $HOME/.config/setttycolor.sh
+fi
+

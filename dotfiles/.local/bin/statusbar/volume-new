@@ -1,17 +1,27 @@
 #!/bin/sh
 
 muted=`pactl list sinks | awk '/Stumm/{print $2}'`
-volume=`pactl list sinks | awk '/\sLautstärke/{printf "%s", $5}'`
+volume=`pactl list sinks | awk '/\sLautstärke/{printf "%s", $5}' | sed 's/\%//g'`
 
-case $muted in
-  ja)
-    echo "$volume (muted)"
-    ;;
-  nein)
-    echo "$volume"
-    ;;
-esac
+icon_muted=' 0%'
+icon_off=''
+icon_low=''
+icon_high=''
+
+if [ $muted != 'nein' ];
+then
+    echo $icon_muted
+elif [ $volume -lt 33 ];
+then
+    echo "$icon_off $volume%"
+elif [ $volume -lt 66 ];
+then
+    echo "$icon_low $volume%"
+else
+    echo "$icon_high $volume%"
+fi
 
 case $BLOCK_BUTTON in
   1) pavucontrol ;;
 esac
+
