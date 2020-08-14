@@ -3,11 +3,10 @@
 #echo `yay -Syy > /dev/null && yay -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"`
 
 if [ -f /tmp/updatesavailable ]; then
-	cat /tmp/updatesavailable
+    echo  $(cat /tmp/updatesavailable)
 fi
 
 case $BLOCK_BUTTON in
   1)
-    "$TERMINAL" -e yay -Syyu && checkupdates
-;;
+    "$TERMINAL" -e yay -Syyu && checkupdates;;
 esac
