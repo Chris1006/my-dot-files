@@ -29,4 +29,14 @@ elif [ $CAPACITY -le 99 ]; then
 fi
     
 echo $ICON $CAPACITY'%' 
+echo "BAT=$BATTERY"
+
+# when capacity < 20 => color is orange
+# when capacity < 10 => color is red
+
+if [ $CAPACITY -le 10 ]; then
+    echo "#FF0000"
+elif [ $CAPACITY -le 20 ]; then
+    echo "#FF8000"
+fi
 
