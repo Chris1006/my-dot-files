@@ -5,7 +5,7 @@ NEWMAIL="$(du -a ~/.local/share/mail/*/INBOX/new/* 2> /dev/null | sed -n '$=')$(
 if [ -z $NEWMAIL ]; then
     exit
 fi
-echo $NEWMAIL
+echo  $NEWMAIL
 
 case $BLOCK_BUTTON in
   1) "$TERMINAL" -e neomutt ;;

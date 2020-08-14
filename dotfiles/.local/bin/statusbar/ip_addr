@@ -6,9 +6,11 @@ esac
 
 case "$(cat /sys/class/net/wlan0/operstate 2>/dev/null)" in
     down) 
-        wifiicon="offline" ;;
+        wifiicon="睊" ;;
     up) wifiicon="$(awk '/^\s*w/ { print "", int($3 * 100 / 70) "% " }' /proc/net/wireless)" ;;
 esac
 
+wifi_icon="$(echo $wifiicon | head -n 1)"
 
-printf "%s%s\n" "$wifiicon" "$(sed "s/down//;s/up//" /sys/class/net/e*/operstate 2>/dev/null)"
+printf "%s%s\n" "$wifi_icon " "$(sed "s/down//;s/up//" /sys/class/net/e*/operstate 2>/dev/null)"
+
