@@ -1,6 +1,6 @@
 new_window	1pixel
-gaps inner 5
-gaps outer 1
+#gaps inner 5
+#gaps outer 1
 #smart_gaps on
 smart_borders on
 
@@ -36,7 +36,6 @@ bar {
     i3bar_command i3bar --transparency
     position top
     status_command i3blocks
-    tray_padding 10
     workspace_min_width 30
     colors {
         background $base00$transp
