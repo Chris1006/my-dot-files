@@ -4,13 +4,13 @@ mnphs=$(pom | grep -io 'new\|waxing crescent\|first quarter\|waxing gibbous\|ful
 prcnt=$(pom | grep -o '..%')
 
 case $mnphs in
-  	"New") icon="🌑" ;;
-	"Waxing Crescent") icon="🌒" ;;
-  	"First Quarter") icon="🌓" ;;
-    "Waxing Gibbous") icon="🌔" ;;
-  	"Waning Gibbous") icon="🌖" ;;
-  	"Last Quarter") icon="🌗" ;;
-  	"Waning Crescent") icon="🌘" ;;
+  	"New") icon="" ;;
+	"Waxing Crescent") icon="" ;;
+  	"First Quarter") icon="" ;;
+    "Waxing Gibbous") icon="" ;;
+  	"Waning Gibbous") icon="" ;;
+  	"Last Quarter") icon="" ;;
+  	"Waning Crescent") icon="" ;;
     "Full") icon="🌕" ;;
 	  *) echo errorrrr ;;
 esac

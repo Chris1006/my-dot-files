@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+echo " "$(free -h --si | awk ' FNR == 2 { printf "%s/%s", $3, $2  } ')

@@ -1,5 +1,5 @@
 #/bin/sh
 
-free_disk_space=`df -h | grep /home$ | awk '{printf "%s Used [%s/%s]", $5, $4, $2}'`
+free_disk_space=`df -h | grep /home$ | awk '{printf "%s/%s", $4, $2}'`
 
-echo "$free_disk_space"
+echo " $free_disk_space"

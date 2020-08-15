@@ -10,6 +10,6 @@ choice_by_dmenu
 
 case "$choice" in
   0) i3-msg exit now || killall dwm;;
-  1) shutdown -r now &   ;;
-  2) shutdown -h now &   ;;
+  1) sudo -A shutdown -r now &   ;;
+  2) sudo -A shutdown -h now &   ;;
 esac
