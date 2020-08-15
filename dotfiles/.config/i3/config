@@ -5,7 +5,7 @@ new_window	1pixel
 smart_borders on
 
 # font configuration
-font pango: Fira Code Regular 11
+font pango: Fira Code Nerd Font 11
 
 #######
 #THEME#

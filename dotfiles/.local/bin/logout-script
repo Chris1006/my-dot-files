@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 choice_by_dmenu() {
   choice=$(echo "0: Logout\n1: Reboot\n2: Shutdown" | dmenu | cut -d ':' -f 1)

@@ -4,4 +4,4 @@
 
 
 #exec dwm
-exec i3 > /dev/null
+ssh-agent i3 > /dev/null

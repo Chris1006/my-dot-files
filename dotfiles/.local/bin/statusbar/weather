@@ -10,45 +10,30 @@ SYMBOL_CELSIUS="°"
 URGENT_LOWER="0"
 URGENT_HIGHER="28"
 
-ICON_SUNNY=""
-ICON_CLOUDY=""
-ICON_RAINY=""
-ICON_STORM=""
-ICON_SNOW=""
-ICON_FOG="敖"
-ICON_SQUALL="敖"
-
 WEATHER_INFO=$(wget -qO- "${URL}")
 WEATHER_MAIN=$(echo "${WEATHER_INFO}" | grep -o -e '\"main\":\"[a-Z]*\"' | awk -F ':' '{print $2}' | tr -d '"')
 WEATHER_TEMP=$(echo "${WEATHER_INFO}" | grep -o -e '\"temp\":\-\?[0-9]*' | awk -F ':' '{print $2}' | tr -d '"')
 
-WEATHER_ICON=" "
-
-case "$WEATHER_MAIN" in
-  *Snow* )	  
-	WEATHER_ICON="${ICON_SNOW}"
-	  ;;
-  *Rain* )
-	WEATHER_ICON="${ICON_RAINY}"
-	  ;;
-  *Thunderstorm* )
-	WEATHER_ICON="${ICON_STORM}"
-	  ;;
-  *Cloud* )
-	WEATHER_ICON="${ICON_CLOUDY}"
-	  ;;
-  *Clear* )
-	WEATHER_ICON="${ICON_SUNNY}"
-	  ;;
-  *Fog* )
-	WEATHER_ICON="${ICON_FOG}"
-	  ;;
-  *Squall* )
-	WEATHER_ICON="${ICON_SQUALL}"
-	  ;;
-  * )
-	WEATHER_ICON="${WEATHER_MAIN}"
-	  ;;
+WEATHER_ICON_NAME=$(echo $WEATHER_INFO | grep -o -e '\"icon\":\"[0-9a-Z]*\"' | awk -F ':' '{print $2}' | tr -d '"')
+case $WEATHER_ICON_NAME in
+    "01d") WEATHER_ICON="";;
+    "02d") WEATHER_ICON="";;
+    "03d") WEATHER_ICON="";;
+    "04d") WEATHER_ICON="";;
+    "09d") WEATHER_ICON="";;
+    "10d") WEATHER_ICON="";;
+    "11d") WEATHER_ICON="";;
+    "13d") WEATHER_ICON="";;
+    "50d") WEATHER_ICON="" ;;
+    "01n") WEATHER_ICON="望";;
+    "02n") WEATHER_ICON="";;
+    "03n") WEATHER_ICON="";;
+    "04n") WEATHER_ICON="";;
+    "09n") WEATHER_ICON="";;
+    "10n") WEATHER_ICON="";;
+    "11n") WEATHER_ICON="";;
+    "13n") WEATHER_ICON="";;
+    "50n") WEATHER_ICON="" ;;
 esac
 
 WEATHER_OUTPUT="$WEATHER_ICON $WEATHER_TEMP$SYMBOL_CELSIUS"

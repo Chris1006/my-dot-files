@@ -1,7 +1,7 @@
 [global]
-    font                 = Fura Code Nerd Font 12
-    frame_color          = "#d5c4a1"
-    seperator_color      = frame 
+    font                 = Fira Code Nerd Font 12
+    frame_color          = "#28282800"
+    seperator_color      = none
     markup	             = yes
     plain_text           = no
     format               = "%s\n%b"
@@ -18,19 +18,19 @@
     show_age_threshold   = 60
     idle_threshold       = 120
     
-    geometry             = "300x30-10+60"
+    geometry             = "200x30-10+60"
     shrink               = no
     line_height          = 0
     notification_height  = 30
     separator_height     = 2
-    padding              = 32
-    horizontal_padding   = 12
+    padding              = 15
+    horizontal_padding   = 5
     
     monitor              = 0
     follow               = mouse
     
     sticky_history       = yes
-    history_length       = 20
+    history_length       = 2
     
     icon_position        = right
     icon_path = /usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/devices/
@@ -40,12 +40,13 @@
     browser              = /usr/bin/chromium -new-tab
 
 [urgency_low]
-    background = "#3c3836"
+    background = "#282828"
     foreground = "#665c54"
 
 [urgency_normal]
-    background = "#504945"
+    background = "#282828"
     foreground = "#d5c4a1"
+    transparency = 40
 
 [urgency_critical]
     background = "#fb4934"
