@@ -37,7 +37,7 @@ bar {
     position top
     status_command i3blocks
     workspace_min_width 30
-    height 24
+    height 48
     colors {
         background $base00$transp
         separator  $base02
