@@ -8,15 +8,15 @@ URL="http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&u
 SYMBOL_CELSIUS="°"
 
 URGENT_LOWER="0"
-URGENT_HIGHER="25"
+URGENT_HIGHER="28"
 
-ICON_SUNNY="☀️"
-ICON_CLOUDY="☁️"
-ICON_RAINY="🌧️"
-ICON_STORM="🌬️"
-ICON_SNOW="🌨️"
-ICON_FOG="🌫️"
-ICON_SQUALL="🌬️ "
+ICON_SUNNY=""
+ICON_CLOUDY=""
+ICON_RAINY=""
+ICON_STORM=""
+ICON_SNOW=""
+ICON_FOG="敖"
+ICON_SQUALL="敖"
 
 WEATHER_INFO=$(wget -qO- "${URL}")
 WEATHER_MAIN=$(echo "${WEATHER_INFO}" | grep -o -e '\"main\":\"[a-Z]*\"' | awk -F ':' '{print $2}' | tr -d '"')

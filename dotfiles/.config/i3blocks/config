@@ -2,47 +2,32 @@ separator_block_width=15
 markup=pango
 
 #[music]
-#interval=
+#interval=10
 #command=~/.local/bin/statusbar/music
-#label=🎵
 
-#[moonphase]
-#interval=3600
-#command=~/.local/bin/statusbar/moonphase
+[moonphase]
+interval=3600
+command=~/.local/bin/statusbar/moonphase
 
-#[weather]
-#interval=60
-#command=~/.local/bin/statusbar/weather
+[weather]
+interval=60
+command=~/.local/bin/statusbar/weather
 
-#[free_disk_space]
-#interval=60
-#command=~/.local/bin/statusbar/free_disk_space
-#label=💽
+[cpu_temp]
+interval=15
+command=~/.local/bin/statusbar/cpu_temp
 
-#[cpu_temp]
-#interval=15
-#command=~/.local/bin/statusbar/cpu_temp
-#label=🌡️
+[cpu_usage]
+interval=15
+command=~/.local/bin/statusbar/cpu_usage
 
-#[cpu_usage]
-#interval=15
-#command=~/.local/bin/statusbar/cpu_usage
-#label=💻
+[memory]
+interval=60
+command=~/.local/bin/statusbar/memory
 
-[mailbox]
-interval=once
-command=~/.local/bin/statusbar/mailbox
-signal=19
-
-[news]
-interval=once
-command=~/.local/bin/statusbar/news
-signal=14
-
-[pacman]
-interval=once
-command=~/.local/bin/statusbar/pacman
-signal=13
+[free_disk_space]
+interval=60
+command=~/.local/bin/statusbar/free_disk_space
 
 [ip_addr]
 interval=20
@@ -64,3 +49,19 @@ interval=60
 [clock]
 command=~/.local/bin/statusbar/clock
 interval=30
+
+[mailbox]
+interval=once
+command=~/.local/bin/statusbar/mailbox
+signal=19
+
+[news]
+interval=once
+command=~/.local/bin/statusbar/news
+signal=14
+
+[pacman]
+interval=once
+command=~/.local/bin/statusbar/pacman
+signal=13
+

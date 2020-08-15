@@ -11,4 +11,4 @@ print_temp_table() {
 
 cpu_temp=`print_temp_table   | grep temp | sed 's/\(.\)..$/.\1°C/' | awk '{print $2}' | head -n1`
 
-echo "$cpu_temp"
+echo " $cpu_temp"

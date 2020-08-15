@@ -5,7 +5,7 @@ new_window	1pixel
 smart_borders on
 
 # font configuration
-font pango: Fura Code Nerd Font 11
+font pango: Fira Code Regular 11
 
 #######
 #THEME#
@@ -29,7 +29,7 @@ set $base0D #83a598
 set $base0E #d3869b
 set $base0F #d65d0e
 
-set $transp da
+set $transp CC
 
 #start of bar section
 bar {
@@ -37,10 +37,11 @@ bar {
     position top
     status_command i3blocks
     workspace_min_width 30
+    height 24
     colors {
         background $base00$transp
-        separator  $base01
-        statusline $base04
+        separator  $base02
+        statusline $base05
         # State             Border  BG             Text
         focused_workspace   $base05 $base0D$transp $base00
         active_workspace    $base05 $base03$transp $base00
@@ -165,7 +166,7 @@ bindsym $mod+m exec $TERMINAL -c neomutt -e neomutt
 bindsym $mod+c exec $TERMINAL -c calcurse -e calcurse -D ~/.config/calcurse
 bindsym $mod+n exec $TERMINAL -c newsboat -e newsboat
 bindsym $mod+Shift+b exec --no-startup-id tor-browser
-bindsym $mod+t exec $TERMINAL -c transmission -e transmission-remote-cli
+bindsym $mod+t exec $TERMINAL -c transmission -e tremc
 bindsym $mod+p exec $TERMINAL -c ncmpcpp -e ncmpcpp
 bindsym $mod+Shift+f exec $TERMINAL -c ranger -e ranger
 
