@@ -37,19 +37,6 @@ command=~/.local/bin/statusbar/ip_addr
 interval=5
 command=~/.local/bin/statusbar/battery
 
-[volume]
-interval=once
-signal=10
-command=~/.local/bin/statusbar/volume-new
-
-[calendar]
-command=~/.local/bin/statusbar/calendar
-interval=60
-
-[clock]
-command=~/.local/bin/statusbar/clock
-interval=30
-
 [mailbox]
 interval=once
 command=~/.local/bin/statusbar/mailbox
@@ -64,4 +51,17 @@ signal=14
 interval=once
 command=~/.local/bin/statusbar/pacman
 signal=13
+
+[volume]
+interval=once
+signal=10
+command=~/.local/bin/statusbar/volume-new
+
+[calendar]
+command=~/.local/bin/statusbar/calendar
+interval=60
+
+[clock]
+command=~/.local/bin/statusbar/clock
+interval=30
 

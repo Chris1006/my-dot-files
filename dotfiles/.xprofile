@@ -5,14 +5,14 @@ dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XA
 
 xrandr --dpi 192 &
 setbg &
-#xcompmgr &
-picom -b > /dev/null &
+xcompmgr &
+#picom -b > /dev/null &
 unclutter &
 udiskie &
 dunst &
 
 [ -f /usr/bin/nextcloud ] && nextcloud &&
-~/.local/bin/start-gnome-keyring &
+#. ~/.local/bin/start-gnome-keyring &
 xset s 300 0 &
-xss-lock --transfer-sleep-lock -- ~/.local/bin/lockscreen &
+xss-lock ~/.local/bin/lockscreen &
 xflux -l $XFLUX_LAT -g $XFLUX_LONG > /dev/null &

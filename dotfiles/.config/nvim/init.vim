@@ -16,7 +16,6 @@ set incsearch
 set cursorline
 set colorcolumn=80
 
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " vi:syntax=vim
 call plug#begin()
@@ -40,8 +39,9 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 
 colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
-
+hi Normal  ctermbg=NONE guibg=NONE
+hi ColorColumn ctermbg=darkgrey guibg=NONE
+hi CursorLine ctermbg=darkgrey guibg=NONE
 " #colorscheme base16-dracula
 " let base16colorspace=256 
 " Nerdtree settings

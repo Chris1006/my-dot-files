@@ -5,7 +5,7 @@
 [ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
 
 # EXPORT PATH
-export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$HOME/.config/node_modules/bin:$PATH
 
 
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
@@ -21,9 +21,11 @@ export ZDOTDIR="$HOME/.config/zsh"
 export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+export npm_config_prefix=$XDG_CONFIG_HOME/npm/node_modules
 
 # HIGHDPI
 export GDK_SCALE=2
@@ -37,8 +39,9 @@ export TERMINAL="st"
 export TERM=$TERMINAL
 export DIFFPROG="nvimdiff"
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
+#. $HOME/.local/bin/start-gnome-keyring
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+#export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
 # Start mpd if not running
 [ ! -f $HOME/.config/mpd/mpd.pid ] && mpd >/dev/null 2>&1 &

@@ -8,5 +8,5 @@ show_date() {
 show_date
 
 case $BLOCK_BUTTON in
-    1) "$TERMINAL" -e calcurse -D $HOME/.config/calcurse ;;
+    1) "$TERMINAL" -e khal interactive ;; 
 esac

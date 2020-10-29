@@ -1,3 +1,2 @@
 #!/bin/sh
-echo $CALCURSE_CALDAV_PASSWORD
-CALCURSE_CALDAV_PASSWORD=$(pass show calcurse) calcurse-caldav --config ~/.config/calcurse/caldav/config --datadir ~/.config/calcurse --lockfile ~/.config/calcurse/caldav/lock --syncdb ~/.config/calcurse/caldav/sync.db --hookdir ~/.config/calcurse/hooks
+vdirsyncer
