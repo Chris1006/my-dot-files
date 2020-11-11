@@ -5,7 +5,7 @@ new_window	1pixel
 smart_borders on
 
 # font configuration
-font pango: Fira Code Regular 11, Nerd Font 11
+font pango: sans-serif 11
 
 #######
 #THEME#
@@ -170,8 +170,8 @@ bindsym $mod+p exec $TERMINAL -c ncmpcpp -e ncmpcpp
 bindsym $mod+Shift+f exec $TERMINAL -c ranger -e ranger
 
 # lock screen
-bindsym $mod+Shift+x exec ~/.local/bin/lockscreen
-bindsym Mod1+Ctrl+Delete exec ~/.local/bin/lockscreen
+bindsym $mod+Shift+x exec --no-startup-id $HOME/.local/bin/lockscreen
+bindsym Mod1+Ctrl+Delete exec --no-startup-id /home/chris/.local/bin/lockscreen
 
 # mounting
 bindsym $mod+F5		exec --no-startup-id dmenumount

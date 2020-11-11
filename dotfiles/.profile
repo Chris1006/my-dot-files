@@ -44,7 +44,7 @@ export DIFFPROG="nvimdiff"
 #export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
 # Start mpd if not running
-[ ! -f $HOME/.config/mpd/mpd.pid ] && mpd >/dev/null 2>&1 &
+#[ ! -f $HOME/.config/mpd/mpd.pid ] && mpd >/dev/null 2>&1 &
 
 # start x
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then

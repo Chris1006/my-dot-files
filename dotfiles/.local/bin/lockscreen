@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # stop dunst
-#pkill -u "$USER" -USR1 dunst
+killall -SIGUSR1 dunst
 
 # lock with i3 lock
-#i3lock -n -e -c 000000 -u 
+i3lock -n -e -c 000000 -u 
 
-/usr/local/bin/slock & 
+#/usr/local/bin/slock & 
 
 # restart dunst
-#pkill -u "$USER" -USR2 dunst
+killall -SIGUSR2 dunst
