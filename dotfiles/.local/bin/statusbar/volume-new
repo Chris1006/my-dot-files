@@ -11,7 +11,7 @@ icon_high=''
 
 if [ $muted != 'nein' ];
 then
-    echo $icon_muted
+    echo "$icon_muted $volume%"
 elif [ $volume -eq 0 ];
 then
     echo "$icon_off $volume%"
