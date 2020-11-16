@@ -3,11 +3,12 @@
 [ -f "$HOME/.config/secretsrc" ] && . $HOME/.config/secretsrc
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
 [ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
+[ -f "$HOME/.config/customdpi" ] && . $HOME/.config/customdpi
 
 # EXPORT PATH
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$HOME/.config/node_modules/bin:$PATH
 
-
+# SUDO PASSWORD PROMPT
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 
 # clean up
@@ -27,10 +28,6 @@ export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 export npm_config_prefix=$XDG_CONFIG_HOME/npm/node_modules
 
-# HIGHDPI
-export GDK_SCALE=2
-#export GDK_DPI_SCALE=1.75
-
 # standard programms
 export VISUAL=nvim
 export EDITOR=$VISUAL
@@ -38,13 +35,6 @@ export BROWSER="firefox-esr"
 export TERMINAL="st"
 export TERM=$TERMINAL
 export DIFFPROG="nvimdiff"
-
-#. $HOME/.local/bin/start-gnome-keyring
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-#export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
-
-# Start mpd if not running
-#[ ! -f $HOME/.config/mpd/mpd.pid ] && mpd >/dev/null 2>&1 &
 
 # start x
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then

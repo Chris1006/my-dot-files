@@ -39,7 +39,7 @@ bar {
     height 48
     colors {
         background $base00$transp
-        separator  $base00$transp
+        separator  $base05$transp
         statusline $base04$transp
     
         # State             Border  BG             Text
