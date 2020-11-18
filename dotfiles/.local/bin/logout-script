@@ -9,7 +9,7 @@ choice_by_dmenu
 [ -z "$choice" ] && exit 1
 
 case "$choice" in
-  0) i3-msg exit now || killall dwm;;
+  0) i3-msg exit now || pkill dwm;;
   1) sudo -A shutdown -r now &   ;;
   2) sudo -A shutdown -h now &   ;;
 esac

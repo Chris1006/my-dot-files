@@ -89,6 +89,13 @@ for_window [class="mpv"] floating enable
 for_window [class="discord"] floating enable
 for_window [class="Steam"] floating enable
 
+for_window [instance="dropdown_*"] floating enable
+for_window [instance="dropdown_*"] move scratchpad
+for_window [instance="dropdown_*"] sticky enable
+for_window [instance="dropdown_*"] scratchpad show
+
+bindsym $mod+Shift+Return exec --no-startup-id ddspawn st  
+
 # mod key => win key
 set $mod Mod4
 
