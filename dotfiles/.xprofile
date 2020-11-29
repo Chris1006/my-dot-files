@@ -11,7 +11,7 @@ mpd &
 xrandr --dpi $CUSTOMDPI &
 setbg &
 #xcompmgr &
-picom -b --experimental-backends --backend glx --blur-method box --blur-size 4 > /dev/null &
+picom -b --experimental-backends > /dev/null &
 unclutter &
 udiskie &
 dunst &
