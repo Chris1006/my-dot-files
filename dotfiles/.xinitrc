@@ -1,14 +1,8 @@
 #!/usr/bin/env sh
 
-[ -f ~/.xprofile ] && . ~/.xprofile
-[ -f ~/.config/sshrc ] && . ~/.config/sshrc
+[ -f $HOME/.xprofile ] && . $HOME/.xprofile
+[ -f $HOME/.config/sshrc ] && . $HOME/.config/sshrc
 
-. ~/.local/bin/start-gnome-keyring
-#exec dwm
+. $HOME/.local/bin/start-gnome-keyring
 
-while type dwm ; do dwm 2> ~/.dwm.log && continue || break; done
-
-#exec dwm
-#exec i3 
-#ssh-agent i3
-#ssh-add
+while type dwm ; do dwm 2> $HOME/.config/dwm/.dwm.log && continue || break; done
