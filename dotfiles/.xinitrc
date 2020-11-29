@@ -3,7 +3,10 @@
 [ -f ~/.xprofile ] && . ~/.xprofile
 [ -f ~/.config/sshrc ] && . ~/.config/sshrc
 
-while type dwm > /dev/null ; do dwm && continue || break; done
+. ~/.local/bin/start-gnome-keyring
+#exec dwm
+
+while type dwm ; do dwm 2> ~/.dwm.log && continue || break; done
 
 #exec dwm
 #exec i3 

@@ -10,8 +10,8 @@ dwmblocks &
 mpd &
 xrandr --dpi $CUSTOMDPI &
 setbg &
-xcompmgr &
-#picom -b > /dev/null &
+#xcompmgr &
+picom -b --experimental-backends --backend glx --blur-method box --blur-size 4 > /dev/null &
 unclutter &
 udiskie &
 dunst &

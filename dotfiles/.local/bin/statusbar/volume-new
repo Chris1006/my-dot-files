@@ -4,10 +4,10 @@ muted=`pactl list sinks | awk '/Stumm/{print $2}'`
 volume=`pactl list sinks | awk '/\sLautstärke/{printf "%s", $5}' | sed 's/\%//g'`
 
 icon_muted='婢'
-icon_off=''
+icon_off=' '
 icon_low='奔'
 icon_normal='墳'
-icon_high=''
+icon_high=' '
 
 if [ $muted != 'nein' ];
 then

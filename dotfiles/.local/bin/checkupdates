@@ -6,8 +6,8 @@ if [ $UPDATESAVAILABLE != "0" ]; then
 	echo $UPDATESAVAILABLE
 	echo "$UPDATESAVAILABLE" > /tmp/updatesavailable
 	notify-send "$UPDATESAVAILABLE Updates available"
-	pkill -RTMIN+13 i3blocks
+	pkill -RTMIN+13 dwmblocks
 elif [ -f /tmp/updatesavailable ]; then
 	rm /tmp/updatesavailable &&
-	pkill -RTMIN+13 i3blocks
+	pkill -RTMIN+13 dwmblocks
 fi

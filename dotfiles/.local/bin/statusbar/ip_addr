@@ -4,12 +4,23 @@ case $BLOCK_BUTTON in
 	1) "$TERMINAL" -e nmtui; pkill -RTMIN+4 dwmblocks ;;
 esac
 
-case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-    down) 
-        wifiicon="睊" ;;
-    up) wifiicon="$(awk '/^\s*w/ { print "", int($3 * 100 / 70) "% " }' /proc/net/wireless)" ;;
-esac
 
+for f in /sys/class/net/w*
+do
+    case "$(cat $f/operstate 2>/dev/null)" in
+        down) 
+            newwifiicon="睊" ;;
+        up) newwifiicon="$(awk '/^\s*w/ { print "", int($3 * 100 / 70) "% " }' /proc/net/wireless)" ;;
+    esac
+
+    if [ -z wifiicon ]
+    then
+        wifiicon=$newwifiicon
+    else
+
+        wifiicon="$wifiicon $newwifiicon"
+    fi
+done
 wifi_icon="$(echo $wifiicon | head -n 1)"
 
 printf "%s%s\n" "$wifi_icon " "$(sed "s/down//;s/up//" /sys/class/net/e*/operstate 2>/dev/null)"
