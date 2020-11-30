@@ -6,7 +6,7 @@
 
 [ -z $CUSTOMDPI ] && CUSTOMDPI=96
 
-dwmblocks &
+#dwmblocks &
 mpd &
 xrandr --dpi $CUSTOMDPI &
 setbg &
