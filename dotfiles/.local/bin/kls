@@ -1,0 +1,3 @@
+#!/bin/sh
+
+CLASSPATH="/usr/share/kotlin/lib/kotlin-script-runtime.jar" kotlin-language-server

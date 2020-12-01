@@ -10,7 +10,7 @@
 mpd &
 xrandr --dpi $CUSTOMDPI &
 setbg &
-xcompmgr &
+#xcompmgr &
 picom -b --experimental-backends > /dev/null &
 unclutter &
 udiskie &
