@@ -5,7 +5,7 @@ killall -SIGUSR1 dunst
 
 # lock with i3 lock
 #i3lock -n -e -c 000000 -u 
-slock &
+slock-pam &
 #/usr/local/bin/slock & 
 
 # restart dunst

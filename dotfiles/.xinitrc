@@ -1,8 +1,1 @@
-#!/usr/bin/env sh
-
-[ -f $HOME/.xprofile ] && . $HOME/.xprofile
-[ -f $HOME/.config/sshrc ] && . $HOME/.config/sshrc
-
-. $HOME/.local/bin/start-gnome-keyring
-
-while type dwm ; do dwm 2> $HOME/.config/dwm/.dwm.log && continue || break; done
+.config/x11/xinitrc
