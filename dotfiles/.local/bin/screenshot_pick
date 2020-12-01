@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# sleep to fix an error: now keybinding works as it should
+sleep 0.5; scrot -s $HOME/Bilder/screenshots/$(date +"%Y_%m_%d_%I_%M_%S").png
