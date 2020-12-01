@@ -1,0 +1,13 @@
+#!/bin/sh
+
+[ ! -v SSH_AUTH_SOCK ] && eval $(ssh-agent)
+
+if [ -d $HOME/.ssh ]
+then
+
+    for key in $HOME/.ssh/id_rsa*
+    do
+        ssh-add $key < /dev/null
+    done
+
+fi

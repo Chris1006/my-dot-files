@@ -35,6 +35,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Townk/vim-autoclose'
 Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
