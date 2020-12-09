@@ -1,0 +1,17 @@
+#!/bin/sh
+
+PARAM=$1
+
+case $PARAM in
+    up) pamixer --allow-boost -i 5;;
+    down) pamixer --allow-boost -d 5;;
+    toggle) pamixer -t;;
+    *) exit;;
+esac
+
+notify-send \
+    -t 1000 \
+    --hint=string:x-dunst-stack-tag:volume \
+    $($HOME/.local/bin/statusbar/volume-new) \
+
+    && pkill -RTMIN+10 dwmblocks
