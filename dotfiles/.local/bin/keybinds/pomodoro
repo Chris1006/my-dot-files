@@ -1,0 +1,11 @@
+#!/bin/sh
+
+notify-send \
+    --icon=gtk-info Pomodoro 'Focus for 25 minutes' && 
+
+    sleep 2500 && 
+
+    notify-send \
+
+    --icon=gtk-info Pomodoro "Take a 5 minute break"
+

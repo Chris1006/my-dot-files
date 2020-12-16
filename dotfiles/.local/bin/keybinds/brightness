@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case $1 in
+    up) xbacklight -inc 10 ;;
+    down) xbacklight -dec 10 ;;
+    *) ;;
+
+esac
+
+notify-send \
+    -t 1000 \
+    --hint=string:x-dunst-stack-tag:brightness \
+    $(~/.local/bin/statusbar/screen_brightness)
+
+pkill -RTMIN+12 dwmblocks

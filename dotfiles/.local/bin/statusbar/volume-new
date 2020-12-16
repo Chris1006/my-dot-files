@@ -1,7 +1,7 @@
 #!/bin/sh
 
-muted=`pactl list sinks | awk '/Stumm/{print $2}'`
-volume=`pactl list sinks | awk '/\sLautstärke/{printf "%s", $5}' | sed 's/\%//g'`
+muted=`pamixer --get-mute`
+volume=`pamixer --get-volume`
 
 icon_muted='婢'
 icon_off=''
@@ -9,7 +9,7 @@ icon_low='奔'
 icon_normal='墳'
 icon_high=''
 
-if [ $muted != 'nein' ];
+if [ $muted = 'true' ];
 then
     echo "$icon_muted $volume%"
 elif [ $volume -eq 0 ];
