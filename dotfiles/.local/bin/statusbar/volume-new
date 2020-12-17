@@ -1,8 +1,7 @@
 #!/bin/sh
 
 muted=`pamixer --get-mute`
-volume=`pamixer --get-volume`
-
+volume=$(($(pamixer --get-volume)/2))
 icon_muted='婢'
 icon_off=''
 icon_low='奔'
