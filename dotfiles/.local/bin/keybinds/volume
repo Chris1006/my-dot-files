@@ -2,16 +2,20 @@
 
 PARAM=$1
 
-case $PARAM in
-    up) pamixer --allow-boost -i 5;;
-    down) pamixer --allow-boost -d 5;;
-    toggle) pamixer -t;;
-    *) exit;;
-esac
-
+notify() {
 notify-send \
-    -t 1000 \
     --hint=string:x-dunst-stack-tag:volume \
     $($HOME/.local/bin/statusbar/volume-new)
 
     pkill -RTMIN+10 dwmblocks
+}
+
+
+case $PARAM in
+    up) [ $(pamixer --get-volume) -gt 199 ] || (pamixer --allow-boost -i 5 && notify);;
+    down) [ $(pamixer --get-volume) -gt 0 ] && (pamixer --allow-boost -d 5 && notify);;
+    toggle) pamixer -t && notify;;
+    *) exit;;
+esac 
+
+
