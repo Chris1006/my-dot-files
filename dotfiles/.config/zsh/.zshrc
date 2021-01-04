@@ -2,8 +2,9 @@
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
 [ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
 [ -f "$HOME/.config/zsh/zsh_git_rc" ] && . $HOME/.config/zsh/zsh_git_rc
-[ -f "$HOME/.config/base16_gruvbox_theme" ] && . $HOME/.config/base16_gruvbox_theme
+#[ -f "$HOME/.config/base16_gruvbox_theme" ] && . $HOME/.config/base16_gruvbox_theme
 
+# [ -f "$HOME/.config/base16_nord_theme" ] && . $HOME/.config/base16_nord_theme
 #COLORS
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}"\$vcs_info_msg_0_$'\n'"$%b "
