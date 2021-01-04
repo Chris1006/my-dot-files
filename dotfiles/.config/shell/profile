@@ -32,7 +32,7 @@ export npm_config_prefix=$XDG_CONFIG_HOME/npm/node_modules
 # standard programms
 export VISUAL="nvim"
 export EDITOR=$VISUAL
-export BROWSER="firefox-esr"
+export BROWSER="firefox"
 export TERMINAL="st"
 export TERM=$TERMINAL
 export DIFFPROG="nvimdiff"
