@@ -17,7 +17,7 @@ nnoremap <C-s> :w<CR>
 " ctrl+Q to quit out
 nnoremap <C-Q> :wq!<CR>
 " control-c as escape
-nnoremap <C-c> <Esc>
+nnoremap <C-c> :bdelete<CR>
 " Tab-completion
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
