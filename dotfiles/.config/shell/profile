@@ -28,6 +28,7 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 export npm_config_prefix=$XDG_CONFIG_HOME/npm/node_modules
+export GOPATH=$XDG_CONFIG_HOME/go
 
 # standard programms
 export VISUAL="nvim"
