@@ -1,0 +1,3 @@
+#!/bin/sh
+
+(pidof picom && killall picom) || picom --experimental-backends &
