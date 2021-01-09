@@ -1,23 +1,23 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "300x30-10+60"
+    geometry = "150x20-5+32"
     indicate_hidden = yes
     shrink = no
     transparency = 15
     notification_height = 30
     separator_height = 2
-    padding = 32
-    horizontal_padding = 12
-    frame_width = 3
-    frame_color = "#504945"
-    separator_color = "#504945"
+    padding = 10
+    horizontal_padding = 10
+    frame_width = 1
+    frame_color = "#4C566A"
+    separator_color = "#4C566A"
     sort = yes
     idle_threshold = 120
     font = Monospace 12
     line_height = 0
     markup = no
-    format = "%s\n%b"
+    format = "%s %b"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
@@ -26,15 +26,15 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = yes
+    show_indicators = no
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = /usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/devices/
+    #icon_path = /usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/devices/
     sticky_history = yes
     history_length = 20
     dmenu = /usr/local/bin/dmenu -p dunst:
-    browser = /usr/bin/firefox-esr -new-tab
+    browser = /usr/bin/firefox -new-tab
     always_run_script = true
     title = Dunst
     class = Dunst
@@ -57,19 +57,19 @@
     context = ctrl+shift+period
 [base16_low]
     msg_urgency = low
-    background = "#3c3836"
-    foreground = "#bdae93"
+    background = "#2E3440"
+    foreground = "#88C0D0"
     timeout = 10
     
 [base16_normal]
     msg_urgency = normal
-    background = "#3c3836"
-    foreground = "#bdae93"
+    background = "#2E3440"
+    foreground = "#88C0D0"
     timeout = 10
 
 [base16_critical]
     msg_urgency = critical
-    background = "#83a598"
-    foreground = "#1d2021"
+    background = "#2E3440"
+    foreground = "#88C0D0"
     timeout = 0
 
