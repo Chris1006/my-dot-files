@@ -12,5 +12,6 @@
     "coc-snippets": ">=2.3.1",
     "coc-tsserver": ">=1.6.6",
     "coc-vimlsp": ">=0.11.0"
-  }
+  },
+  "name": "extensions"
 }
