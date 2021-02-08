@@ -1,11 +1,15 @@
 #!/bin/sh
 
-eval $(ssh-agent)
+SSH_AGENT_PID=$(ps aux | grep ssh-agent | grep -v grep | awk '{ print $2 }' | head -n +1)
 
-export SSH_AUTH_SOCK
+[ -z $SSH_AGENT_PID ] && eval `ssh-agent` && echo $SSH_AUTH_SOCK > /tmp/ssh-auth-sock
+
+[ -f /tmp/ssh-auth-sock ] && SSH_AUTH_SOCK=$(cat /tmp/ssh-auth-sock)
+
 export SSH_AGENT_PID
+export SSH_AUTH_SOCK
 
-    for key in $(find $HOME/.ssh/ -name "id_*" -not -name "*.pub")
-    do
-        ssh-add -k $key < /dev/null &>/dev/null
-    done
+for key in $(find $HOME/.ssh/ -name "id_*" -not -name "*.pub")
+do
+    ssh-add -k $key < /dev/null &>/dev/null
+done

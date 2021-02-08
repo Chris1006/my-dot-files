@@ -39,7 +39,7 @@ export TERM=$TERMINAL
 export DIFFPROG="nvimdiff"
 
 # start x
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
     exec startx > /dev/null 2> $HOME/.cache/x11err.log
 else
     export TERM="linux"

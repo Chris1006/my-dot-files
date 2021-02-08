@@ -5,8 +5,10 @@ let g:mapleader = "\<Space>"
 syntax on
 
 " long lines without linebreak
-set nowrap 
-
+" set nowrap 
+set wrap
+let &showbreak='  '
+set breakindent
 " Status Line Options
 set pumheight=10     
 set cmdheight=2 

@@ -42,4 +42,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Start Screen
   Plug 'mhinz/vim-startify'
+  Plug 'mattn/webapi-vim'
+  Plug 'mattn/vim-gist'  
+  " Gist Support
 call plug#end()
