@@ -11,10 +11,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Intellisense for VIM
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  " Gruvbox Theme
-  Plug 'morhetz/gruvbox'
-  Plug 'arcticicestudio/nord-vim'
-
   " NV Code Color Schemes and Treesitter
   Plug 'christianchiarulli/nvcode-color-schemes.vim'
   Plug 'nvim-treesitter/nvim-treesitter'
@@ -44,5 +40,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mhinz/vim-startify'
   Plug 'mattn/webapi-vim'
   Plug 'mattn/vim-gist'  
-  " Gist Support
-call plug#end()
+
+  " icons
+  Plug 'ryanoasis/vim-devicons'
+
+  call plug#end()

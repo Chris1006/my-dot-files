@@ -11,3 +11,4 @@ source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/startscreen.vim
 
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+
