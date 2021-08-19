@@ -6,7 +6,7 @@
 [ -f "$HOME/.config/customdpi" ] && . $HOME/.config/customdpi
 
 # EXPORT PATH
-export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$HOME/.config/node_modules/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$HOME/.config/npm/node_modules/bin:$PATH
 
 # SUDO PASSWORD PROMPT
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
@@ -43,6 +43,5 @@ if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
     exec startx > /dev/null 2> $HOME/.cache/x11err.log
 else
     export TERM="linux"
-    $HOME/.config/setttycolor.sh
 fi
 

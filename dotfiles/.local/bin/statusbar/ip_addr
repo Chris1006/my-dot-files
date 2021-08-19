@@ -23,5 +23,5 @@ do
 done
 wifi_icon="$(echo $wifiicon | head -n 1)"
 
-printf "%s%s\n" "$wifi_icon " "$(sed "s/down//;s/up//" /sys/class/net/e*/operstate 2>/dev/null)"
+printf "%s%s\0" "$wifi_icon " "$(sed "s/down//;s/up//" /sys/class/net/e*/operstate 2>/dev/null)"
 
