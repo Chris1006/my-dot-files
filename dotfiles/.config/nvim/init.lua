@@ -1,7 +1,7 @@
 require'common/settings'.setup()
 require'common/keymaps'
 
-require'common/plugins'.setup()
+require'common/plugins'
 require'layout/theme'
 
 require'plugins/nvim-lspconfig'

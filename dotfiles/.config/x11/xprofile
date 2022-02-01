@@ -6,9 +6,12 @@
 
 #[ -z $CUSTOMDPI ] && CUSTOMDPI=96
 
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+
 #dwmblocks &
 mpd &
-xrandr --dpi $CUSTOMDPI &
+xrandr --dpi 96 &
 setbg &
 #xcompmgr &
 picom -b --experimental-backends > /dev/null &

@@ -3,7 +3,7 @@
 [ -f "$HOME/.config/secretsrc" ] && . $HOME/.config/secretsrc
 [ -f "$HOME/.config/aliasrc" ] && . $HOME/.config/aliasrc
 [ -f "$HOME/.config/shortcutsrc" ] && . $HOME/.config/shortcutsrc
-[ -f "$HOME/.config/customdpi" ] && . $HOME/.config/customdpi
+#[ -f "$HOME/.config/customdpi" ] && . $HOME/.config/customdpi
 
 # EXPORT PATH
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$HOME/.config/npm/node_modules/bin:$PATH
