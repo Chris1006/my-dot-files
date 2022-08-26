@@ -113,14 +113,10 @@ disable_netrw       = true,
     -- git stuff
     use {
       'lewis6991/gitsigns.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim'
-      },
       config = function()
         require('gitsigns').setup()
       end
-    } 
-
+    }
     -- markdown previewer
     use 'iamcco/markdown-preview.nvim'
 
