@@ -9,7 +9,7 @@
 export PATH=$HOME/.local/bin:$HOME/.local/bin/games:$HOME/.local/bin/private:/usr/local/bin:$HOME/.config/npm/node_modules/bin:$PATH
 
 # SUDO PASSWORD PROMPT
-export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+#export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 
 # clean up
 #export XINITRC="$HOME/.config/x11/xinitrc"
@@ -31,17 +31,17 @@ export npm_config_prefix=$XDG_CONFIG_HOME/npm/node_modules
 export GOPATH=$XDG_CONFIG_HOME/go
 
 # standard programms
-export VISUAL="nvim"
-export EDITOR=$VISUAL
-export BROWSER="firefox"
-export TERMINAL="st"
-export TERM=$TERMINAL
-export DIFFPROG="nvimdiff"
+#export VISUAL="nvim"
+#export EDITOR=$VISUAL
+#export BROWSER="firefox"
+#export TERMINAL="st"
+#export TERM=$TERMINAL
+#export DIFFPROG="nvimdiff"
 
 # start x
-if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
-    exec startx > /dev/null 2> $HOME/.cache/x11err.log
-else
-    export TERM="linux"
-fi
+#if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
+#    exec startx > /dev/null 2> $HOME/.cache/x11err.log
+#else
+#    export TERM="linux"
+#fi
 

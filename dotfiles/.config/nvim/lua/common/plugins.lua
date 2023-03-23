@@ -35,6 +35,11 @@
 
     use 'mhartington/formatter.nvim'
 
+
+    -- icons
+
+    use 'kyazdani42/nvim-web-devicons'
+
     -- cool status bar
     use {
       'hoob3rt/lualine.nvim',

@@ -10,6 +10,9 @@ export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 
 #dwmblocks &
+#/usr/bin/pipewire &
+#/usr/bin/pipewire-pulse &
+#/usr/bin/wireplumber &
 mpd &
 xrandr --dpi 96 &
 setbg &

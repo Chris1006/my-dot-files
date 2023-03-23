@@ -1,9 +1,7 @@
 #!/usr/bin/env sh
 
-
-#exec cinnamon-session-cinnamon
-[ -f ~/.Xresources ] && xrdb -merge -I$HOME ~/.Xresources
 [ -f $HOME/.xprofile ] && . $HOME/.xprofile
+[ -f ~/.Xresources ] && xrdb -merge -I$HOME ~/.Xresources
 [ -f $HOME/.config/sshrc ] && . $HOME/.config/sshrc
 
 
