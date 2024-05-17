@@ -1,13 +1,11 @@
 #!/usr/bin/env sh
 
-
+./.local/bin/start-gnome-keyring
+#exec gnome-session
 #exec cinnamon-session-cinnamon
 [ -f ~/.Xresources ] && xrdb -merge -I$HOME ~/.Xresources
 [ -f $HOME/.xprofile ] && . $HOME/.xprofile
 [ -f $HOME/.config/sshrc ] && . $HOME/.config/sshrc
 
-
-#. $HOME/.local/bin/start-gnome-keyring
-
-while type dwm ; do dwm 2> $HOME/.cache/dwm.log && continue || break; done
+while type dwm ; do exec dwm 2> $HOME/.cache/dwm.log && continue || break; done
 

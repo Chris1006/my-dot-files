@@ -1,17 +1,54 @@
 #/bin/sh
 
+
+
+#exit -1
+
 case $BLOCK_BUTTON in
-	1) "$TERMINAL" acpi -i ;;
+	1) 
+    MSG=$(acpi -b | awk ' { print "Battery at " $04 "\n" $3 "\n" $05 " " $06 } ' | sed  "s/,//g")
+
+    notify-send "$MSG" ;;
 esac
 
 BATTERY='/sys/class/power_supply/BAT0'
 
-ICON_EMPTY=''
-ICON_QUARTER=''
-ICON_HALF=''
-ICON_THREEQUARTER=''
-ICON_FULL=''
-ICON_CHARGING=''
+ICON_BATTERY_00='󱃍'
+ICON_BATTERY_10='󰁺'
+ICON_BATTERY_20='󰁻'
+ICON_BATTERY_30='󰁼'
+ICON_BATTERY_40='󰁽'
+ICON_BATTERY_50='󰁾'
+ICON_BATTERY_60='󰁿'
+ICON_BATTERY_70='󰂀'
+ICON_BATTERY_80='󰂁'
+ICON_BATTERY_90='󰂂'
+ICON_BATTERY_FU='󰁹'
+
+
+ICON_BATTERY_00_CH='󰢜'
+ICON_BATTERY_10_CH='󰢜'
+ICON_BATTERY_20_CH='󰂆'
+ICON_BATTERY_30_CH='󰂇'
+ICON_BATTERY_40_CH='󰂈'
+ICON_BATTERY_50_CH='󰢝'
+ICON_BATTERY_60_CH='󰂉'
+ICON_BATTERY_70_CH='󰢞'
+ICON_BATTERY_80_CH='󰂊'
+ICON_BATTERY_90_CH='󰂋'
+ICON_BATTERY_FU_CH='󰂅'
+
+
+
+
+
+ICON_EMPTY=''
+ICON_QUARTER=''
+ICON_HALF=''
+ICON_THREEQUARTER=''
+ICON_FULL=''
+ICON_FULL_CHARGING=''
+ICON_CHARGING='󰂅'
 
 STATUS=$(sed "s/[Dd]ischarging/dc/;s/[Nn]ot charging/nc/;s/[Cc]harging/cc/;s/[Uu]nknown/uk/;s/[Ff]ull/ff/" $BATTERY'/status') 
 CAPACITY=$(cat $BATTERY'/capacity' 2>/dev/null)
@@ -19,21 +56,59 @@ CAPACITY=$(cat $BATTERY'/capacity' 2>/dev/null)
 ICON=''
 
 if [ $STATUS = 'ff' ]; then
-    ICON=$ICON_FULL
+    ICON=$ICON_BATTERY_FU_CH
 elif [ $STATUS = 'cc' ]; then
-    ICON=$ICON_CHARGING
-elif [ $CAPACITY -le 10 ]; then
-    ICON=$ICON_EMPTY
-elif [ $CAPACITY -le 50 ]; then
-    ICON=$ICON_QUARTER
-elif [ $CAPACITY -le 75 ]; then
-    ICON=$ICON_HALF
-elif [ $CAPACITY -le 99 ]; then
-    ICON=$ICON_THREEQUARTER
+    if [ $CAPACITY -le 10 ]; then
+      ICON=$ICON_BATTERY_10_CH;
+    elif [ $CAPACITY -le 20 ]; then
+      ICON=$ICON_BATTERY_20_CH;
+    elif [ $CAPACITY -le 30 ]; then
+      ICON=$ICON_BATTERY_30_CH;
+    elif [ $CAPACITY -le 40 ]; then
+      ICON=$ICON_BATTERY_40_CH;
+    elif [ $CAPACITY -le 50 ]; then
+      ICON=$ICON_BATTERY_50_CH;
+    elif [ $CAPACITY -le 60 ]; then
+      ICON=$ICON_BATTERY_60_CH;
+    elif [ $CAPACITY -le 70 ]; then
+      ICON=$ICON_BATTERY_70_CH;
+    elif [ $CAPACITY -le 80 ]; then
+      ICON=$ICON_BATTERY_80_CH;
+    elif [ $CAPACITY -le 90 ]; then
+      ICON=$ICON_BATTERY_90_CH;
+    elif [ $CAPACITY -le 100 ]; then
+      ICON=$ICON_BATTERY_FU_CH;
+    fi
+
+else
+    if [ $CAPACITY -le 5 ]; then
+      ICON=$ICON_BATTERY_00
+    elif [ $CAPACITY -le 10 ]; then
+      ICON=$ICON_BATTERY_10;
+    elif [ $CAPACITY -le 20 ]; then
+      ICON=$ICON_BATTERY_20;
+    elif [ $CAPACITY -le 30 ]; then
+      ICON=$ICON_BATTERY_30;
+    elif [ $CAPACITY -le 40 ]; then
+      ICON=$ICON_BATTERY_40;
+    elif [ $CAPACITY -le 50 ]; then
+      ICON=$ICON_BATTERY_50;
+    elif [ $CAPACITY -le 60 ]; then
+      ICON=$ICON_BATTERY_60;
+    elif [ $CAPACITY -le 70 ]; then
+      ICON=$ICON_BATTERY_70;
+    elif [ $CAPACITY -le 80 ]; then
+      ICON=$ICON_BATTERY_80;
+    elif [ $CAPACITY -le 90 ]; then
+      ICON=$ICON_BATTERY_90;
+    elif [ $CAPACITY -le 100 ]; then
+      ICON=$ICON_BATTERY_FU;
+    fi
+
 fi
     
-echo $ICON $CAPACITY'%' 
-echo "BAT=$BATTERY"
+echo "$ICON" 
+#echo "BAT=$BATTERY"
 
 # when capacity < 20 => color is orange
 # when capacity < 10 => color is red

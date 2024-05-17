@@ -1,8 +1,16 @@
 #!/bin/sh
 
+ 
+
 show_current_time() {
   current_time=`date +"%H:%M"`
-  echo " $current_time"
+  echo "$current_time"
 }
 
 show_current_time
+
+
+
+case $BLOCK_BUTTON in
+    1) notify-send "$(date)" ;; 
+esac

@@ -4,7 +4,7 @@
 killall -SIGUSR1 dunst
 
 # lock with i3 lock
-#i3lock -n -e -c 000000 -u 
+#swaylock -n -e -c 2e3440 -u --fade-in 0.5 --screenshots --effect-blur 7x5 --effect-vignette 0.5:0.5 
 slock-pam &
 #/usr/local/bin/slock & 
 

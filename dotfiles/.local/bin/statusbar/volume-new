@@ -2,27 +2,31 @@
 
 muted=`pamixer --get-mute`
 volume=$(($(pamixer --get-volume)/2))
-icon_muted='婢'
-icon_off=''
-icon_low='奔'
-icon_normal='墳'
-icon_high=''
+icon_muted='󰝟'
+icon_off='󰖁'
+icon_low='󰕿'
+icon_normal='󰖀'
+icon_high='󰕾'
+
+OUTPUT=""
 
 if [ $muted = 'true' ];
 then
-    echo "$icon_muted $volume%"
+    OUTPUT="$icon_muted"
 elif [ $volume -eq 0 ];
 then
-    echo "$icon_off $volume%"
+    OUTPUT="$icon_off"
 elif [ $volume -lt 33 ];
 then
-    echo "$icon_low $volume%"
+    OUTPUT="$icon_low"
 elif [ $volume -lt 66 ];
 then
-    echo "$icon_normal $volume%"
+    OUTPUT="$icon_normal"
 else
-    echo "$icon_high $volume%"
+    OUTPUT="$icon_high"
 fi
+
+echo $OUTPUT
 
 case $BLOCK_BUTTON in
   1) pavucontrol ;;

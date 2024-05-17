@@ -1,8 +1,12 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "300x20-5+64"
+    width = 300
+    height = 100
     indicate_hidden = yes
+    offset = 5x30
+    progress_bar = true
+
     shrink = no
     transparency = 15
     notification_height = 30
@@ -10,7 +14,7 @@
     padding = 10
     horizontal_padding = 10
     frame_width = 1
-    frame_color = "#585858"
+    frame_color = "#bf616a"
     separator_color = "#585858"
     sort = yes
     idle_threshold = 120
@@ -49,7 +53,7 @@
 
 [frame]
     width = 1
-    color = "#83a598"
+    color = "#bf616a"
 [experimental]
     per_monitor_dpi = false
 
@@ -60,17 +64,17 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#282828"
-    foreground = "#ebdbb2"
+    background = "#2e3440"
+    foreground = "#d8dee9"
     timeout = 5
 
 [urgency_normal]
-    background = "#282828"
-    foreground = "#ebdbb2"
+    background = "#2e3440"
+    foreground = "#d8dee9"
     timeout = 20
 
 [urgency_critical]
-    background = "#282828"
-    foreground = "#ebdbb2"
+    background = "#2e3440"
+    foreground = "#d8dee9"
     timeout = 0
 

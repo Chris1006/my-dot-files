@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-#dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
 [ -f "$HOME/.config/customdpi" ] && . $HOME/.config/customdpi
 
-#[ -z $CUSTOMDPI ] && CUSTOMDPI=96
+[ -z $CUSTOMDPI ] && CUSTOMDPI=192
 
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
@@ -14,17 +14,18 @@ export GDK_DPI_SCALE=0.5
 #/usr/bin/pipewire-pulse &
 #/usr/bin/wireplumber &
 mpd &
-xrandr --dpi 96 &
+xrandr --dpi 192 &
 setbg &
 #xcompmgr &
-picom -b --experimental-backends > /dev/null &
+picom > /dev/null &
 unclutter &
 udiskie &
 dunst &
 
-#-f /usr/bin/nextcloud ] && nextcloud &&
+[ -f /usr/bin/nextcloud ] && nextcloud &
 
 [ -f /usr/bin/blueman-applet ] && blueman-applet &
+
 xset s 300 0 &
 xss-lock ~/.local/bin/lockscreen &
 xflux -l $XFLUX_LAT -g $XFLUX_LONG > /dev/null &

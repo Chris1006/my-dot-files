@@ -5,7 +5,7 @@ PARAM=$1
 notify() {
 notify-send \
     --hint=string:x-dunst-stack-tag:volume \
-    $($HOME/.local/bin/statusbar/volume-new)
+    $($HOME/.local/bin/statusbar/volume-new) $(echo "scale=0; $(pamixer --get-volume )/2" | bc -l)
 
     pkill -RTMIN+10 dwmblocks
 }

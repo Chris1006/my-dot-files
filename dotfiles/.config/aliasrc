@@ -9,7 +9,7 @@ alias pm="yay"
 
 alias vim="nvim"
 alias trizen="yay"
-alias mutt="neomutt"
+alias mutt="TERM=xterm neomutt"
 alias muttorg="mutt"
 alias sudo="sudo "
 alias sv="systemctl"

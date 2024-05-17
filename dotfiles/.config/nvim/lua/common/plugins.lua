@@ -7,7 +7,7 @@
     fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
     execute 'packadd packer.nvim'
   end
-
+  
   local packer = require'packer'
 
   packer.startup(function()
@@ -24,20 +24,35 @@
 
     -- lsp stuff
     use {
+      'VonHeikemen/lsp-zero.nvim',
+      'williamboman/mason.nvim',
+      "williamboman/mason-lspconfig.nvim",
       'neovim/nvim-lspconfig',
-      'williamboman/nvim-lsp-installer',
+      'glepnir/lspsaga.nvim'
     }
-    use 'glepnir/lspsaga.nvim'
-    use 'hrsh7th/nvim-compe'
-
-    use 'hrsh7th/vim-vsnip'
-    use 'hrsh7th/vim-vsnip-integ'
-
+    
+    -- completion
+    use {
+      'hrsh7th/nvim-cmp',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'saadparwaiz1/cmp_luasnip',
+    }
+    
+    -- snippets
+    use {
+      'hrsh7th/vim-vsnip',
+      'hrsh7th/vim-vsnip-integ',
+      'L3MON4d3/LuaSnip',
+      'rafamadriz/friendly-snippets',
+    }
+    
+    -- formatter
     use 'mhartington/formatter.nvim'
 
 
     -- icons
-
     use 'kyazdani42/nvim-web-devicons'
 
     -- cool status bar
@@ -49,11 +64,9 @@
     -- file manager
     use {
     'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function() require'nvim-tree'.setup {
-        
-        } end
+        requires = 'kyazdani42/nvim-web-devicons'
     }
+
     -- better tab bar
     use 'romgrk/barbar.nvim'
 

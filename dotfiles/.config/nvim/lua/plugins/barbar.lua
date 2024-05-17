@@ -19,3 +19,10 @@ nnoremap('<A-c>', ':BufferClose<CR>')
 nnoremap('<C-s>', ':BufferPick<CR>')
 nnoremap('<Space>bd', ':BufferOrderByDirectory<CR>')
 nnoremap('<Space>bl', ':BufferOrderByLanguage<CR>')
+
+vim.g.barbar_auto_setup = false
+require'barbar'.setup{
+  sidebar_filetypes = {
+    NvimTree = true
+  }
+}

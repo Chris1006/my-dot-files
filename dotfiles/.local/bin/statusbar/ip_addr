@@ -4,24 +4,47 @@ case $BLOCK_BUTTON in
 	1) "$TERMINAL" -e nmtui; pkill -RTMIN+4 dwmblocks ;;
 esac
 
+VPN_ACTIVE=0
+
+if [ $(nmcli c show --active | grep vpn | wc -l) -ge 1 ]; then 
+  VPN_ACTIVE=1
+else
+  VPN_ACTIVE=0
+fi
+
 
 for f in /sys/class/net/w*
 do
-    case "$(cat $f/operstate 2>/dev/null)" in
-        down) 
-            newwifiicon="睊" ;;
-        up) newwifiicon="$(awk '/^\s*w/ { print "", int($3 * 100 / 70) "% " }' /proc/net/wireless)" ;;
-    esac
-
-    if [ -z wifiicon ]
-    then
-        wifiicon=$newwifiicon
-    else
-
-        wifiicon="$wifiicon $newwifiicon"
-    fi
+  case "$(cat $f/operstate 2> /dev/null)" in
+    down)
+      echo "󰤮";;
+    up)
+      SIGNALSTR=$(awk '/^\s*w/ { print int($3 * 100 / 70) }' /proc/net/wireless)
+      if [ $SIGNALSTR -le 25 ]; then
+        if [ $VPN_ACTIVE -eq 1 ]; then
+          echo "󰤡"
+        else
+          echo "󰤟"
+        fi
+      elif [ $SIGNALSTR -le 50 ]; then
+        if [ $VPN_ACTIVE -eq 1 ]; then
+          echo "󰤤"
+        else
+          echo "󰤢"
+        fi
+      elif [ $SIGNALSTR -le 75 ]; then
+        if [ $VPN_ACTIVE -eq 1 ]; then
+          echo "󰤧"
+        else
+          echo "󰤥"
+        fi
+      elif [ $SIGNALSTR -le 100 ]; then
+        if [ $VPN_ACTIVE -eq 1 ]; then
+          echo "󰤪"
+        else
+          echo "󰤨"
+        fi
+      fi;;
+  esac
 done
-wifi_icon="$(echo $wifiicon | head -n 1)"
-
-printf "%s%s\0" "$wifi_icon " "$(sed "s/down//;s/up//" /sys/class/net/e*/operstate 2>/dev/null)"
 
